@@ -158,11 +158,23 @@ router.post('/circle-waitlist', async (req, res) => {
 });
 
 // --- Saved Items & Trips ---
-router.post('/save', authenticate, async (req: AuthRequest, res) => {
+router.post('/save', async (req, res) => {
     try {
         await connectDB();
+        // Allow identification via Firebase token or direct email (backward compat)
+        let userId;
+        try {
+            const { authenticate } = await import('../middleware/auth.js');
+            const authReq = req as AuthRequest;
+            await new Promise((resolve) => authenticate(authReq, res as any, resolve));
+            userId = authReq.user?.email || req.body.email;
+        } catch (e) {
+            userId = req.body.email;
+        }
+
         const { itemId, itemType, title, itemLink } = req.body;
-        const userId = req.user!.email!;
+        if (!userId) return res.status(401).json({ success: false, error: 'Unauthorized: User identification required' });
+        
         const existing = await SavedItem.findOne({ userId, itemId, itemType });
         if (existing) {
             await SavedItem.deleteOne({ _id: existing._id });
@@ -175,11 +187,24 @@ router.post('/save', authenticate, async (req: AuthRequest, res) => {
     }
 });
 
-router.get('/save', authenticate, async (req: AuthRequest, res) => {
+router.get('/save', async (req, res) => {
     try {
         await connectDB();
-        const { itemId, itemType } = req.query;
-        const userId = req.user!.email!;
+        const { itemId, itemType, email } = req.query;
+        
+        // Attempt to get user from token, but fallback to email param for GET status checks
+        let userId = email as string;
+        if (!userId) {
+            try {
+                const { authenticate } = await import('../middleware/auth.js');
+                const authReq = req as AuthRequest;
+                await new Promise((resolve) => authenticate(authReq, res as any, resolve));
+                userId = authReq.user?.email || "";
+            } catch (e) {}
+        }
+
+        if (!userId) return res.status(401).json({ error: "Missing email identification" });
+
         if (itemId && itemType) {
             const exists = await SavedItem.findOne({ userId, itemId, itemType });
             return res.json({ saved: !!exists });
@@ -191,10 +216,24 @@ router.get('/save', authenticate, async (req: AuthRequest, res) => {
     }
 });
 
-router.get('/trips', authenticate, async (req: AuthRequest, res) => {
+router.get('/trips', async (req, res) => {
     try {
         await connectDB();
-        const trips = await Trip.find({ userId: req.user!.email }).sort({ createdAt: -1 });
+        const { email } = req.query;
+        let userId = email as string;
+        
+        if (!userId) {
+            try {
+                const { authenticate } = await import('../middleware/auth.js');
+                const authReq = req as AuthRequest;
+                await new Promise((resolve) => authenticate(authReq, res as any, resolve));
+                userId = authReq.user?.email || "";
+            } catch (e) {}
+        }
+
+        if (!userId) return res.status(401).json({ error: "Missing email identification" });
+
+        const trips = await Trip.find({ userId }).sort({ createdAt: -1 });
         res.json({ success: true, data: trips });
     } catch (error: any) {
         res.status(500).json({ error: error.message });
