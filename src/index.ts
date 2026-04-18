@@ -3,9 +3,9 @@ dotenv.config();
 
 import express from 'express';
 import cors from 'cors';
-import { connectDB } from './lib/mongodb';
-import aiRoutes from './routes/ai';
-import authRoutes from './routes/auth';
+import { connectDB } from './lib/mongodb.js';
+import aiRoutes from './routes/ai.js';
+import authRoutes from './routes/auth.js';
 
 const app = express();
 const PORT = process.env.PORT || 5001;
@@ -17,9 +17,22 @@ app.use(cors({
 }));
 app.use(express.json());
 
-// Request logging
+// Enhanced Request logging
 app.use((req, res, next) => {
-  console.log(`${new Date().toISOString()} - ${req.method} ${req.path}`);
+  const start = Date.now();
+  console.log(`\n--- [${new Date().toISOString()}] ${req.method} ${req.path} ---`);
+  if (Object.keys(req.query).length) console.log(`Query:`, req.query);
+  if (req.body && Object.keys(req.body).length) {
+    const bodyClone = { ...req.body };
+    if (bodyClone.password) bodyClone.password = '******'; // Sensitive data protection
+    console.log(`Body:`, bodyClone);
+  }
+
+  res.on('finish', () => {
+    const duration = Date.now() - start;
+    console.log(`--- [Done] ${req.method} ${req.path} | Status: ${res.statusCode} | Duration: ${duration}ms ---\n`);
+  });
+
   next();
 });
 

@@ -1,7 +1,7 @@
-import { openrouter } from "./openrouter";
+import { openrouter } from "./openrouter.js";
 import OpenAI from "openai";
-import AIConfig from "../models/AIConfig";
-import { connectDB } from "./mongodb";
+import AIConfig from "../models/AIConfig.js";
+import { connectDB } from "./mongodb.js";
 
 export interface Message {
     role: "system" | "user" | "assistant";
@@ -44,6 +44,8 @@ export async function generateAIResponse(
     const thinkingBudget = options.thinkingBudget ?? dbConfig?.thinkingBudget ?? undefined;
     const stopSequences = options.stopSequences ?? (dbConfig?.stopSequences?.length ? dbConfig.stopSequences : undefined);
     const responseSchema = options.responseSchema ?? dbConfig?.responseSchema ?? undefined;
+
+    console.log(`[AI-Service] provider=${provider}, model=${options.overrideConfig?.modelName || (provider === 'google' ? dbConfig?.googleModelName : dbConfig?.modelName)}`);
 
     if (provider === "google") {
         return await callGoogleGemini(messages, {
@@ -154,6 +156,7 @@ async function callGoogleGemini(
 
     const url = `https://generativelanguage.googleapis.com/v1beta/models/${options.model}:generateContent?key=${options.apiKey}`;
 
+    console.log(`[AI-Service] Calling Google Gemini API...`);
     const response = await fetch(url, {
         method: "POST",
         headers: {

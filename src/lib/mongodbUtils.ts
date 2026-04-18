@@ -1,5 +1,5 @@
-import { connectDB } from "./mongodb";
-import User, { IUser } from "./models/User";
+import { connectDB } from "./mongodb.js";
+import User, { IUser } from "../models/User.js";
 
 export interface UserFormData {
   name: string;

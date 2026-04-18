@@ -1,4 +1,4 @@
-import { TourPackage, tourData } from "./tourData";
+import { TourPackage, tourData } from "./tourData.js";
 
 export type { TourPackage };
 export { tourData as tourPackages };

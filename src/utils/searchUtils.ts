@@ -1,6 +1,6 @@
-import { rentalsData, RentalItem } from "../data/rentalsData";
-import { sightseeingPackages, SightseeingPackage } from "../data/sightseeingData";
-import { tourData, TourPackage } from "../data/tourData";
+import { rentalsData, RentalItem } from "../data/rentalsData.js";
+import { sightseeingPackages, SightseeingPackage } from "../data/sightseeingData.js";
+import { tourData, TourPackage } from "../data/tourData.js";
 
 export interface SearchResults {
     rentals: any[];

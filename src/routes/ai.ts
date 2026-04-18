@@ -1,10 +1,10 @@
 import { Router } from 'express';
-import { generateAIResponse } from '../lib/ai-service';
-import { connectDB } from '../lib/mongodb';
-import AIConfig from '../models/AIConfig';
-import RecommendationCache from '../models/RecommendationCache';
-import { fetchPlaceDetails } from '../utils/wikipedia';
-import { PHASE_PROMPTS, QuestionnairePhase } from '../lib/ai-trip-planner/prompts';
+import { generateAIResponse } from '../lib/ai-service.js';
+import { connectDB } from '../lib/mongodb.js';
+import AIConfig from '../models/AIConfig.js';
+import RecommendationCache from '../models/RecommendationCache.js';
+import { fetchPlaceDetails } from '../utils/wikipedia.js';
+import { PHASE_PROMPTS, QuestionnairePhase } from '../lib/ai-trip-planner/prompts.js';
 import mongoose from 'mongoose';
 
 const router = Router();
@@ -26,10 +26,9 @@ function calculateDistance(lat1: number, lon1: number, lat2: number, lon2: numbe
  * Ported from app/api/ai-recommendations/route.ts
  */
 router.post('/recommendations', async (req, res) => {
-    try {
-        const { primaryType, secondaryTypes, departure } = req.body;
-
+        console.log(`[AI-Recommendation] Started for type: ${primaryType} near ${departure.lat}, ${departure.lon}`);
         if (!primaryType || !departure) {
+            console.warn(`[AI-Recommendation] Missing fields: primaryType=${!!primaryType}, departure=${!!departure}`);
             return res.status(400).json({ success: false, error: 'Missing required fields' });
         }
 
@@ -41,6 +40,12 @@ router.post('/recommendations', async (req, res) => {
         
         const cachedResult = await RecommendationCache.findOne({ key: cacheKey });
         const existingPayload = (cachedResult && cachedResult.rawPayload) ? cachedResult.rawPayload : [];
+        
+        if (existingPayload.length > 0) {
+            console.log(`[AI-Recommendation] Cache hit for key: ${cacheKey}`);
+        } else {
+            console.log(`[AI-Recommendation] Cache miss. Fetching fresh results...`);
+        }
         
         const config = await AIConfig.findOne({});
         if (!config || (config.provider === 'openrouter' && !config.apiKey) || (config.provider === 'google' && !config.googleApiKey)) {
@@ -55,12 +60,18 @@ router.post('/recommendations', async (req, res) => {
 
         let aiResponse;
         try {
+            console.log(`[AI-Recommendation] Sending prompt to AI: ${userPrompt.substring(0, 100)}...`);
             aiResponse = await generateAIResponse([
                 { role: 'system', content: 'You are a precise AI travel assistant. You ONLY output an array of raw JSON objects.' },
                 { role: 'user', content: userPrompt }
             ], { response_format: { type: 'json_object' } });
-        } catch (apiError) {
-            if (existingPayload.length > 0) return res.json({ success: true, data: existingPayload, source: 'cache_fallback' });
+            console.log(`[AI-Recommendation] AI responded successfully.`);
+        } catch (apiError: any) {
+            console.error(`[AI-Recommendation] API Error:`, apiError.message);
+            if (existingPayload.length > 0) {
+                console.log(`[AI-Recommendation] Falling back to existing cache.`);
+                return res.json({ success: true, data: existingPayload, source: 'cache_fallback' });
+            }
             throw apiError;
         }
 
@@ -107,8 +118,10 @@ router.post('/recommendations', async (req, res) => {
             }, { upsert: true });
         }
 
+        console.log(`[AI-Recommendation] Completed. Returning ${finalResults.length} locations.`);
         res.json({ success: true, data: finalResults, source: validFreshResults.length > 0 ? 'fresh_ai' : 'cache_only' });
     } catch (error: any) {
+        console.error(`[AI-Recommendation] Error:`, error.message);
         res.status(500).json({ success: false, error: error.message });
     }
 });
@@ -131,8 +144,10 @@ router.post('/planner', async (req, res) => {
             { role: "user", content: prompt },
         ], { response_format: { type: "json_object" } });
 
+        console.log(`[AI-Planner] Response sent successfully.`);
         res.json(JSON.parse(completion.content || "{}"));
     } catch (error: any) {
+        console.error(`[AI-Planner] Error:`, error.message);
         res.status(500).json({ success: false, error: error.message });
     }
 });

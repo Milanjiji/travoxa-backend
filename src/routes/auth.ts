@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getUser } from '../lib/mongodbUtils';
+import { getUser } from '../lib/mongodbUtils.js';
 
 const router = Router();
 
@@ -11,8 +11,10 @@ const router = Router();
 // Login endpoint (following the logic in nextauth route)
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
+  console.log(`[Auth-Login] Login attempt for email: ${email}`);
 
   if (!email || !password) {
+    console.warn(`[Auth-Login] Missing email or password`);
     return res.status(400).json({ success: false, error: 'Email and password are required' });
   }
 
@@ -33,8 +35,11 @@ router.post('/login', async (req, res) => {
     }
 
     // Fetch additional user data from DB
+    console.log(`[Auth-Login] Firebase auth successful. Fetching DB user for: ${email}`);
     const dbUser = await getUser(email);
+    console.log(`[Auth-Login] DB user found: ${!!dbUser}`);
 
+    console.log(`[Auth-Login] Login successful for: ${email}`);
     res.json({
       success: true,
       user: {
@@ -48,7 +53,7 @@ router.post('/login', async (req, res) => {
     });
 
   } catch (error: any) {
-    console.error("❌ Login error:", error);
+    console.error("❌ [Auth-Login] Login error:", error.message);
     res.status(500).json({ success: false, error: 'Internal server error' });
   }
 });
