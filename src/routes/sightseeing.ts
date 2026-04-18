@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
         } else if (admin === 'true') {
             if (status) query.status = status;
         } else {
-            query.status = 'approved';
+            query.$or = [{ status: 'approved' }, { status: { $exists: false } }];
         }
 
         let packages = await Sightseeing.find(query).sort({ createdAt: -1 });

@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
         } else if (admin === 'true') {
             if (status) query.status = typeof status === 'string' ? status : undefined;
         } else {
-            query.status = 'approved';
+            query.$or = [{ status: 'approved' }, { status: { $exists: false } }];
         }
 
         let rentals = await Rental.find(query).sort({ createdAt: -1 });

@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
         } else if (admin === 'true') {
             if (status) query.status = status;
         } else {
-            query.status = 'approved';
+            query.$or = [{ status: 'approved' }, { status: { $exists: false } }];
         }
 
         const data = await Activity.find(query).sort({ createdAt: -1 });

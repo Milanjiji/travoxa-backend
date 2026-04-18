@@ -22,7 +22,7 @@ const handleGet = (Model: any, label: string) => async (req: any, res: any) => {
         } else if (admin === 'true') {
             if (status) query.status = status;
         } else {
-            query.status = 'approved';
+            query.$or = [{ status: 'approved' }, { status: { $exists: false } }];
         }
         const data = await Model.find(query).sort({ createdAt: -1 });
         res.json({ success: true, data });
