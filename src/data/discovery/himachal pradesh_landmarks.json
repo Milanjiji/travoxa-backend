@@ -1,0 +1,928 @@
+{
+  "state": "Himachal Pradesh",
+  "lastUpdated": "2026-04-02T07:27:12.939Z",
+  "source": "local_india_locations_json",
+  "totalLandmarks": 55,
+  "landmarks": [
+    {
+      "name": "Vindhyavasini Temple",
+      "lat": 32.1352954,
+      "lon": 76.5381236,
+      "type": "node",
+      "osmId": "osm-853159761",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Vindhyavasini Temple",
+        "religion=hindu"
+      ],
+      "parentCity": "Palampur",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Langha Mata Mandir",
+      "lat": 32.1333928,
+      "lon": 76.5959751,
+      "type": "node",
+      "osmId": "osm-2841161636",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Palampur",
+        "addr:housenumber=Nanahar",
+        "addr:postcode=176062",
+        "addr:street=Kandbari",
+        "amenity=place_of_worship",
+        "name=Langha Mata Mandir",
+        "religion=hindu"
+      ],
+      "parentCity": "Palampur",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Talang Naag Temple",
+      "lat": 32.1270455,
+      "lon": 76.5418399,
+      "type": "node",
+      "osmId": "osm-2841435105",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Palampur",
+        "addr:postcode=176061",
+        "addr:street=Lohna Surad Road",
+        "amenity=place_of_worship",
+        "name=Talang Naag Temple",
+        "religion=hindu"
+      ],
+      "parentCity": "Palampur",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Vindhyavasini Devi",
+      "lat": 32.1689988,
+      "lon": 76.5496026,
+      "type": "node",
+      "osmId": "osm-2877242850",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Palampur",
+        "addr:postcode=176061",
+        "amenity=place_of_worship",
+        "name=Vindhyavasini Devi",
+        "note=Added Original Temple location of Vindhyavasini Devi...as for ease of common people there is another temple dedicated to Vindyavasini Devi in Bandla village of Palampur and just at the gate point of this temple there is Tunnel that further leads to Dam",
+        "religion=hindu"
+      ],
+      "parentCity": "Palampur",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Birni Devi",
+      "lat": 32.1461644,
+      "lon": 76.5617047,
+      "type": "node",
+      "osmId": "osm-2877252266",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Palampur",
+        "addr:postcode=176061",
+        "amenity=place_of_worship",
+        "name=Birni Devi",
+        "note=Temple of Birni Devi",
+        "religion=hindu"
+      ],
+      "parentCity": "Palampur",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Jakhani Mata",
+      "lat": 32.1339274,
+      "lon": 76.56826,
+      "type": "node",
+      "osmId": "osm-2877255253",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Palampur",
+        "addr:postcode=176061",
+        "addr:street=Dugh",
+        "amenity=place_of_worship",
+        "name=Jakhani Mata",
+        "note=Temple of Jakhani Mata in village Dugh",
+        "religion=hindu"
+      ],
+      "parentCity": "Palampur",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Gari Wali Mata",
+      "lat": 32.1646108,
+      "lon": 76.5076999,
+      "type": "node",
+      "osmId": "osm-2877267277",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Palampur",
+        "addr:postcode=176061",
+        "amenity=place_of_worship",
+        "denomination=Hindu",
+        "name=Gari Wali Mata",
+        "note=Temple of Gari Wali Mata with 2450 meters elevation",
+        "religion=hindu"
+      ],
+      "parentCity": "Palampur",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Shiva Mandir",
+      "lat": 32.1168508,
+      "lon": 76.5385721,
+      "type": "node",
+      "osmId": "osm-2888419177",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Palampur",
+        "addr:postcode=176061",
+        "addr:street=Palampur Kandi Road",
+        "amenity=place_of_worship",
+        "name=Shiva Mandir",
+        "name:en=Shiva Mandir",
+        "name:hi=शिव मंदिर",
+        "name:ks=شیو مندر",
+        "name:pa=ਸ਼ਿਵ ਮੰਦਰ",
+        "name:pnb=شو مندر",
+        "name:ur=شیو مندر",
+        "religion=hindu"
+      ],
+      "parentCity": "Palampur",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Shiva Mandir",
+      "lat": 32.1085076,
+      "lon": 76.5443459,
+      "type": "node",
+      "osmId": "osm-2903790542",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Palampur",
+        "addr:postcode=176062",
+        "addr:street=Bandla Holta Cantt Road",
+        "amenity=place_of_worship",
+        "name=Shiva Mandir",
+        "name:en=Shiva Mandir",
+        "name:hi=शिव मंदिर",
+        "name:ks=شیو مندر",
+        "name:pa=ਸ਼ਿਵ ਮੰਦਰ",
+        "name:pnb=شو مندر",
+        "name:ur=شیو مندر",
+        "religion=hindu"
+      ],
+      "parentCity": "Palampur",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Shiva Temple",
+      "lat": 32.0658494,
+      "lon": 76.5059817,
+      "type": "node",
+      "osmId": "osm-2907012119",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Palampur",
+        "addr:housenumber=Gadoo",
+        "addr:postcode=176061",
+        "amenity=place_of_worship",
+        "name=Shiva Temple"
+      ],
+      "parentCity": "Palampur",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Shani Dev Mandir",
+      "lat": 32.0657584,
+      "lon": 76.50603,
+      "type": "node",
+      "osmId": "osm-2907014423",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Palampur",
+        "addr:housenumber=Gaddoon",
+        "addr:postcode=176061",
+        "amenity=place_of_worship",
+        "name=Shani Dev Mandir"
+      ],
+      "parentCity": "Palampur",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Temple of Mata Nagwasini",
+      "lat": 32.1253469,
+      "lon": 76.5724798,
+      "type": "node",
+      "osmId": "osm-2945666540",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Saperu",
+        "addr:postcode=176061",
+        "addr:street=Dramman-Kandbari-Saperu Road",
+        "amenity=place_of_worship",
+        "denomination=Hindu",
+        "name=Temple of Mata Nagwasini",
+        "religion=hindu"
+      ],
+      "parentCity": "Palampur",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Guru Ravidas Temple",
+      "lat": 32.1190218,
+      "lon": 76.5850372,
+      "type": "node",
+      "osmId": "osm-2948814575",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Bari Khas",
+        "addr:postcode=176061",
+        "addr:street=Kandbari - Khas Bari - Nanahar Road",
+        "amenity=place_of_worship",
+        "name=Guru Ravidas Temple",
+        "religion=hindu"
+      ],
+      "parentCity": "Palampur",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Khala Wali Mata",
+      "lat": 32.1766773,
+      "lon": 76.5361991,
+      "type": "node",
+      "osmId": "osm-2962129961",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Palampur",
+        "addr:postcode=176061",
+        "amenity=place_of_worship",
+        "denomination=Hindu",
+        "name=Khala Wali Mata",
+        "religion=hindu"
+      ],
+      "parentCity": "Palampur",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Shiva Temple",
+      "lat": 32.1332673,
+      "lon": 76.5959988,
+      "type": "node",
+      "osmId": "osm-3810814695",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Shiva Temple",
+        "religion=hindu"
+      ],
+      "parentCity": "Palampur",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Devi Santoshi Mata",
+      "lat": 32.1120803,
+      "lon": 76.5309794,
+      "type": "node",
+      "osmId": "osm-4377307250",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Palampur",
+        "addr:postcode=176061",
+        "addr:street=Palampur - Dharamshala Road",
+        "amenity=place_of_worship",
+        "name=Devi Santoshi Mata"
+      ],
+      "parentCity": "Palampur",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Guru Ravidas Mandir",
+      "lat": 32.1211876,
+      "lon": 76.5418476,
+      "type": "node",
+      "osmId": "osm-4377361703",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Palampur",
+        "addr:postcode=176061",
+        "amenity=place_of_worship",
+        "name=Guru Ravidas Mandir"
+      ],
+      "parentCity": "Palampur",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Devi Sansari Mata",
+      "lat": 32.1244075,
+      "lon": 76.5415611,
+      "type": "node",
+      "osmId": "osm-4377365611",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Palampur",
+        "addr:postcode=176061",
+        "addr:street=Lohna Surad Road",
+        "amenity=place_of_worship",
+        "name=Devi Sansari Mata"
+      ],
+      "parentCity": "Palampur",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Baba Pir Varun Dev",
+      "lat": 32.1113952,
+      "lon": 76.5368851,
+      "type": "node",
+      "osmId": "osm-5044960897",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Palampur",
+        "addr:postcode=176061",
+        "addr:street=Major Somnath Sharma Road",
+        "amenity=place_of_worship",
+        "name=Baba Pir Varun Dev"
+      ],
+      "parentCity": "Palampur",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Shani Dev Mandir",
+      "lat": 32.1269001,
+      "lon": 76.533638,
+      "type": "node",
+      "osmId": "osm-5086157964",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Palampur",
+        "addr:postcode=176061",
+        "addr:street=Palampur Kandi Road",
+        "amenity=place_of_worship",
+        "name=Shani Dev Mandir"
+      ],
+      "parentCity": "Palampur",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Shiva Temple",
+      "lat": 32.1068908,
+      "lon": 76.5349731,
+      "type": "node",
+      "osmId": "osm-5102969177",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Palampur",
+        "addr:postcode=176061",
+        "addr:street=NH 20",
+        "amenity=place_of_worship",
+        "name=Shiva Temple",
+        "religion=hindu"
+      ],
+      "parentCity": "Palampur",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Shiva Mandir",
+      "lat": 32.1220519,
+      "lon": 76.5396668,
+      "type": "node",
+      "osmId": "osm-5898428365",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Palampur",
+        "addr:postcode=176061",
+        "addr:street=Lohna Bandla Trail",
+        "amenity=place_of_worship",
+        "name=Shiva Mandir",
+        "name:en=Shiva Mandir",
+        "name:hi=शिव मंदिर",
+        "name:ks=شیو مندر",
+        "name:pa=ਸ਼ਿਵ ਮੰਦਰ",
+        "name:pnb=شو مندر",
+        "name:ur=شیو مندر",
+        "religion=hindu"
+      ],
+      "parentCity": "Palampur",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Khala Wali Mata",
+      "lat": 32.1766769,
+      "lon": 76.5362296,
+      "type": "node",
+      "osmId": "osm-6121707825",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Palampur",
+        "addr:postcode=176061",
+        "amenity=place_of_worship",
+        "name=Khala Wali Mata",
+        "religion=hindu"
+      ],
+      "parentCity": "Palampur",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Mandir",
+      "lat": 32.1332325,
+      "lon": 76.596032,
+      "type": "node",
+      "osmId": "osm-6580807117",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Mandir"
+      ],
+      "parentCity": "Palampur",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Kali Mata Mandir",
+      "lat": 32.1244578,
+      "lon": 76.5408854,
+      "type": "node",
+      "osmId": "osm-7500168768",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Palampur",
+        "addr:postcode=176061",
+        "addr:street=Lohna Surad Road",
+        "amenity=place_of_worship",
+        "name=Kali Mata Mandir",
+        "religion=hindu"
+      ],
+      "parentCity": "Palampur",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Mandir",
+      "lat": 32.1489692,
+      "lon": 76.6021246,
+      "type": "node",
+      "osmId": "osm-9796887667",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Mandir",
+        "religion=hindu"
+      ],
+      "parentCity": "Palampur",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Nag Dewta",
+      "lat": 32.1041446,
+      "lon": 76.604703,
+      "type": "node",
+      "osmId": "osm-12373253171",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Nag Dewta"
+      ],
+      "parentCity": "Palampur",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Gugga Chattari Mandir, Saloh",
+      "lat": 32.0671667,
+      "lon": 76.4927805,
+      "type": "node",
+      "osmId": "osm-13587354286",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Palampur",
+        "addr:district=Kangra",
+        "addr:housenumber=Gugga Saloh",
+        "addr:postcode=176102",
+        "addr:street=Saloh, Palampur, Kangra",
+        "amenity=place_of_worship",
+        "denomination=hindu_temple",
+        "internet_access:ssid=Akshay2.4",
+        "mobile=+91 9459579800",
+        "name=Gugga Chattari Mandir, Saloh",
+        "religion=hindu"
+      ],
+      "parentCity": "Palampur",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Jakhoo",
+      "lat": 31.1010861,
+      "lon": 77.184273,
+      "type": "node",
+      "osmId": "osm-1010789429",
+      "category": "peak",
+      "tags": [
+        "ele=2453",
+        "name=Jakhoo",
+        "natural=peak",
+        "source=GPS"
+      ],
+      "elevation": 2453,
+      "parentCity": "Kufri",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Hanuman statue",
+      "lat": 31.1007473,
+      "lon": 77.1834405,
+      "type": "node",
+      "osmId": "osm-1010789433",
+      "category": "monument",
+      "tags": [
+        "ele=2441",
+        "historic=monument",
+        "name=Hanuman statue"
+      ],
+      "elevation": 2441,
+      "parentCity": "Kufri",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "The Army Heritage Museum",
+      "lat": 31.109506,
+      "lon": 77.1591381,
+      "type": "node",
+      "osmId": "osm-1010797599",
+      "category": "museum",
+      "tags": [
+        "ele=1884",
+        "name=The Army Heritage Museum",
+        "source=GPS",
+        "tourism=museum"
+      ],
+      "elevation": 1884,
+      "parentCity": "Shimla",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Mahatma Gandhi 1869-1948",
+      "lat": 31.1048258,
+      "lon": 77.175513,
+      "type": "node",
+      "osmId": "osm-1010807925",
+      "category": "memorial",
+      "tags": [
+        "historic=memorial",
+        "name=Mahatma Gandhi 1869-1948"
+      ],
+      "parentCity": "Shimla",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Lalalajpatrai 1865-1928",
+      "lat": 31.1050931,
+      "lon": 77.1726038,
+      "type": "node",
+      "osmId": "osm-1010816734",
+      "category": "memorial",
+      "tags": [
+        "historic=memorial",
+        "name=Lalalajpatrai 1865-1928"
+      ],
+      "parentCity": "Shimla",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Lal Bahadur Shastri 1904-66",
+      "lat": 31.105786,
+      "lon": 77.16974,
+      "type": "node",
+      "osmId": "osm-1010816737",
+      "category": "memorial",
+      "tags": [
+        "historic=memorial",
+        "name=Lal Bahadur Shastri 1904-66"
+      ],
+      "parentCity": "Shimla",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Hamachal Pradesh State Museum",
+      "lat": 31.1031447,
+      "lon": 77.1508283,
+      "type": "node",
+      "osmId": "osm-1012073422",
+      "category": "museum",
+      "tags": [
+        "name=Hamachal Pradesh State Museum",
+        "name:en=Himachal Pradesh State Museum",
+        "tourism=museum"
+      ],
+      "parentCity": "Shimla",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Baba Sahib Bhimrao Ambedkar",
+      "lat": 31.103458,
+      "lon": 77.1540409,
+      "type": "node",
+      "osmId": "osm-1012079621",
+      "category": "memorial",
+      "tags": [
+        "description=1891-1956",
+        "historic=memorial",
+        "name=Baba Sahib Bhimrao Ambedkar",
+        "source=GPS"
+      ],
+      "parentCity": "Shimla",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Rajiv Gandhi 1944-91",
+      "lat": 31.0884814,
+      "lon": 77.1798249,
+      "type": "node",
+      "osmId": "osm-1012109529",
+      "category": "monument",
+      "tags": [
+        "historic=monument",
+        "name=Rajiv Gandhi 1944-91"
+      ],
+      "parentCity": "Shimla",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Jakhoo Temple",
+      "lat": 31.1011207,
+      "lon": 77.1839799,
+      "type": "node",
+      "osmId": "osm-1329314535",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Jakhoo Temple",
+        "religion=hindu",
+        "wikidata=Q6125155",
+        "wikipedia=en:Jakhoo"
+      ],
+      "parentCity": "Kufri",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Lakshmi Narayan Mandir",
+      "lat": 31.1036638,
+      "lon": 77.1967956,
+      "type": "node",
+      "osmId": "osm-1834098568",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Lakshmi Narayan Mandir",
+        "religion=hindu"
+      ],
+      "parentCity": "Kufri",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Dhingu Mandir",
+      "lat": 31.1054523,
+      "lon": 77.20028,
+      "type": "node",
+      "osmId": "osm-1834099429",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Dhingu Mandir",
+        "religion=hindu"
+      ],
+      "parentCity": "Kufri",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Himalayan Bird Park",
+      "lat": 31.102903,
+      "lon": 77.1475157,
+      "type": "node",
+      "osmId": "osm-1919728789",
+      "category": "zoo",
+      "tags": [
+        "name=Himalayan Bird Park",
+        "tourism=zoo"
+      ],
+      "parentCity": "Shimla",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Kali Bari Temple",
+      "lat": 31.1061127,
+      "lon": 77.1667746,
+      "type": "node",
+      "osmId": "osm-1919728790",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Kali Bari Temple",
+        "religion=hindu"
+      ],
+      "parentCity": "Shimla",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Sidh Shri Baba Balak Nath Ji Mandir",
+      "lat": 31.0999239,
+      "lon": 77.1827594,
+      "type": "node",
+      "osmId": "osm-4853048721",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Sidh Shri Baba Balak Nath Ji Mandir",
+        "name:en=Sidh Shri Baba Balak Nath Ji Mandir",
+        "religion=hindu"
+      ],
+      "parentCity": "Kufri",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Bantony Castle",
+      "lat": 31.1061523,
+      "lon": 77.1695597,
+      "type": "node",
+      "osmId": "osm-5613364524",
+      "category": "attraction",
+      "tags": [
+        "historic=monument",
+        "name=Bantony Castle",
+        "note=build 1880,  rennovation start 2017  ",
+        "tourism=attraction"
+      ],
+      "parentCity": "Shimla",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Railway Board Building",
+      "lat": 31.1053166,
+      "lon": 77.1648594,
+      "type": "node",
+      "osmId": "osm-5613364525",
+      "category": "attraction",
+      "tags": [
+        "name=Railway Board Building",
+        "tourism=attraction"
+      ],
+      "parentCity": "Shimla",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Hamberg 40rp",
+      "lat": 31.1054254,
+      "lon": 77.1683782,
+      "type": "node",
+      "osmId": "osm-6646451600",
+      "category": "attraction",
+      "tags": [
+        "name=Hamberg 40rp",
+        "tourism=attraction"
+      ],
+      "parentCity": "Shimla",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Gurudwara Kalgidhar Sabha",
+      "lat": 31.0928758,
+      "lon": 77.1721676,
+      "type": "node",
+      "osmId": "osm-6697810951",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Shimla",
+        "addr:postcode=171001",
+        "addr:street=Dyerton Estate, Beerkhana,",
+        "amenity=place_of_worship",
+        "name=Gurudwara Kalgidhar Sabha",
+        "religion=sikh"
+      ],
+      "parentCity": "Shimla",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Deothi",
+      "lat": 31.0763433,
+      "lon": 77.2060775,
+      "type": "node",
+      "osmId": "osm-8830560619",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Deothi",
+        "religion=hindu"
+      ],
+      "parentCity": "Kufri",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Jakhoo",
+      "lat": 31.1004963,
+      "lon": 77.1835685,
+      "type": "node",
+      "osmId": "osm-9780981201",
+      "category": "peak",
+      "tags": [
+        "ele=2453",
+        "name=Jakhoo",
+        "natural=peak",
+        "source=GPS"
+      ],
+      "elevation": 2453,
+      "parentCity": "Kufri",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Mahasu",
+      "lat": 31.0867106,
+      "lon": 77.2626185,
+      "type": "node",
+      "osmId": "osm-6435595339",
+      "category": "peak",
+      "tags": [
+        "ele=2632",
+        "name=Mahasu",
+        "natural=peak",
+        "wikidata=Q17618799"
+      ],
+      "elevation": 2632,
+      "parentCity": "Kufri",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Jwala Mata Temple",
+      "lat": 31.0045599,
+      "lon": 77.1526632,
+      "type": "node",
+      "osmId": "osm-8560434217",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Jwala Mata Temple"
+      ],
+      "parentCity": "Chail",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Kali Tibba",
+      "lat": 30.9339888,
+      "lon": 77.2047625,
+      "type": "node",
+      "osmId": "osm-9768481847",
+      "category": "attraction",
+      "tags": [
+        "ele=2170",
+        "name=Kali Tibba",
+        "natural=peak",
+        "tourism=attraction"
+      ],
+      "elevation": 2170,
+      "parentCity": "Chail",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Cave of Nightmares",
+      "lat": 30.9943394,
+      "lon": 77.2126006,
+      "type": "node",
+      "osmId": "osm-11135813788",
+      "category": "attraction",
+      "tags": [
+        "name=Cave of Nightmares",
+        "natural=cave_entrance",
+        "tourism=attraction"
+      ],
+      "parentCity": "Chail",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Mountains",
+      "lat": 30.9636183,
+      "lon": 77.2058527,
+      "type": "node",
+      "osmId": "osm-11139147976",
+      "category": "viewpoint",
+      "tags": [
+        "name=Mountains",
+        "tourism=viewpoint"
+      ],
+      "parentCity": "Chail",
+      "parentState": "Himachal Pradesh"
+    },
+    {
+      "name": "Orange Temple",
+      "lat": 30.9623193,
+      "lon": 77.2027016,
+      "type": "node",
+      "osmId": "osm-11139193033",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Orange Temple",
+        "religion=hindu"
+      ],
+      "parentCity": "Chail",
+      "parentState": "Himachal Pradesh"
+    }
+  ]
+}

@@ -1,0 +1,1111 @@
+{
+  "state": "Karnataka",
+  "lastUpdated": "2026-04-02T07:37:38.679Z",
+  "source": "local_india_locations_json",
+  "totalLandmarks": 68,
+  "landmarks": [
+    {
+      "name": "Someshwara Temple",
+      "lat": 13.2474989,
+      "lon": 76.2264327,
+      "type": "node",
+      "osmId": "osm-2261811339",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Someshwara Temple",
+        "name:kn=ಸೋಮೇಶ್ವರ ದೇವಸ್ಥಾನ",
+        "religion=hindu"
+      ],
+      "parentCity": "Arsikere",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Sri Anjaneya Temple",
+      "lat": 13.3158119,
+      "lon": 76.2564615,
+      "type": "node",
+      "osmId": "osm-2958259475",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Sri Anjaneya Temple",
+        "name:kn=ಶ್ರೀ ಆಂಜನೇಯ ದೇವಸ್ಥಾನ",
+        "religion=hindu"
+      ],
+      "parentCity": "Arsikere",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Sri Jenukallu Siddeshwara Svami Temple",
+      "lat": 13.2974643,
+      "lon": 76.2156136,
+      "type": "node",
+      "osmId": "osm-3013704339",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Jenukal Hills",
+        "amenity=place_of_worship",
+        "name=Sri Jenukallu Siddeshwara Svami Temple",
+        "name:kn=ಶ್ರೀ ಜೇನುಕಲ್ಲು ಸಿದ್ದೇಶ್ವರ ಸ್ವಾಮಿ ದೇವಸ್ಥಾನ",
+        "religion=hindu"
+      ],
+      "parentCity": "Arsikere",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Jenukallu Betta",
+      "lat": 13.2975045,
+      "lon": 76.2146531,
+      "type": "node",
+      "osmId": "osm-3055297141",
+      "category": "peak",
+      "tags": [
+        "name=Jenukallu Betta",
+        "name:kn=ಜೇನುಕಲ್ಲು ಬೆಟ್ಟ",
+        "natural=peak"
+      ],
+      "parentCity": "Arsikere",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Shaneshwara Swamy",
+      "lat": 13.305279,
+      "lon": 76.2637433,
+      "type": "node",
+      "osmId": "osm-3709245816",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Shaneshwara Swamy",
+        "name:kn=ಶನೇಶ್ವರ ಸ್ವಾಮಿ",
+        "religion=hindu"
+      ],
+      "parentCity": "Arsikere",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Ganesha",
+      "lat": 13.3170436,
+      "lon": 76.2532241,
+      "type": "node",
+      "osmId": "osm-6810630486",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=arsikere",
+        "addr:housenumber=12",
+        "addr:postcode=573103",
+        "addr:street=lakshmipuram",
+        "amenity=place_of_worship",
+        "denomination=hindu",
+        "name=Ganesha",
+        "name:kn=ಗಣೇಶ ದೇವಸ್ಥಾನ",
+        "religion=hindu",
+        "service_times=24"
+      ],
+      "parentCity": "Arsikere",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "SFS",
+      "lat": 13.319797,
+      "lon": 76.2519011,
+      "type": "node",
+      "osmId": "osm-6810632562",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=arsikere",
+        "addr:housenumber=123",
+        "addr:postcode=573103",
+        "addr:street=bh",
+        "amenity=place_of_worship",
+        "denomination=baptist",
+        "name=SFS",
+        "religion=muslim"
+      ],
+      "parentCity": "Arsikere",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Shettikatte Ammanavaru",
+      "lat": 13.3661701,
+      "lon": 76.2090536,
+      "type": "node",
+      "osmId": "osm-8718183443",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Shettikatte Ammanavaru",
+        "name:kn=ಶೆಟ್ಟಿಕಟ್ಟೆ ಅಮ್ಮನವರು",
+        "religion=hindu"
+      ],
+      "parentCity": "Arsikere",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Eidgah",
+      "lat": 16.2177645,
+      "lon": 74.8733399,
+      "type": "node",
+      "osmId": "osm-8196833449",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:full=Balobal, Karnataka",
+        "addr:state=Karnataka",
+        "amenity=place_of_worship",
+        "name=Eidgah",
+        "name:kn=ಇದ್ಗಾ",
+        "religion=muslim"
+      ],
+      "parentCity": "Belagavi",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Aqsa Masjid",
+      "lat": 16.171851,
+      "lon": 74.824798,
+      "type": "node",
+      "osmId": "osm-8196833531",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:full=Venkateshwara Temple Rd, Old Town Sector 1, Gokak, Karnataka",
+        "addr:state=Karnataka",
+        "amenity=place_of_worship",
+        "name=Aqsa Masjid",
+        "name:kn=ಅಕ್ಸಾ ಮಸೀದಿ",
+        "religion=muslim"
+      ],
+      "parentCity": "Belagavi",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Jamia Masjid",
+      "lat": 16.2121403,
+      "lon": 76.5641606,
+      "type": "node",
+      "osmId": "osm-8196833459",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:full=SH 19, Honnahalli, Karnataka",
+        "addr:state=Karnataka",
+        "amenity=place_of_worship",
+        "name=Jamia Masjid",
+        "name:kn=ಜಮ ಮಸ್ಜಿದ್",
+        "religion=muslim"
+      ],
+      "parentCity": "Lingsugur",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Fatima Masjid",
+      "lat": 16.1608087,
+      "lon": 76.5202012,
+      "type": "node",
+      "osmId": "osm-8196833547",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:full=Lingsugur, Karnataka",
+        "addr:state=Karnataka",
+        "amenity=place_of_worship",
+        "name=Fatima Masjid",
+        "name:kn=ಫತಿಮಾ ಮಸೀದಿ",
+        "religion=muslim"
+      ],
+      "parentCity": "Lingsugur",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Masjid -e- Umar Bin",
+      "lat": 16.152753,
+      "lon": 76.5254553,
+      "type": "node",
+      "osmId": "osm-8196833559",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:full=Pamankallu Cross, Hatti, Renuka Nagar, Deodurga, Kotha, Karnataka",
+        "addr:state=Karnataka",
+        "amenity=place_of_worship",
+        "name=Masjid -e- Umar Bin",
+        "religion=muslim"
+      ],
+      "parentCity": "Lingsugur",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Sri Ugranarasimha Swami Temple",
+      "lat": 12.5898407,
+      "lon": 77.048258,
+      "type": "node",
+      "osmId": "osm-3308675902",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Maddur",
+        "amenity=place_of_worship",
+        "name=Sri Ugranarasimha Swami Temple",
+        "name:kn=ಶ್ರೀ ಉಗ್ರನರಸಿಂಹ ಸ್ವಾಮಿ ದೇವಸ್ಥಾನ",
+        "religion=hindu"
+      ],
+      "parentCity": "Maddur",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Sri Varadaraja Swami Temple",
+      "lat": 12.5900472,
+      "lon": 77.0477835,
+      "type": "node",
+      "osmId": "osm-3308675903",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Maddur",
+        "amenity=place_of_worship",
+        "name=Sri Varadaraja Swami Temple",
+        "name:kn=ಶ್ರೀ ವರದರಾಜ ಸ್ವಾಮಿ ದೇವಸ್ಥಾನ",
+        "religion=hindu"
+      ],
+      "parentCity": "Maddur",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Madduramma Temple",
+      "lat": 12.5921286,
+      "lon": 77.0472724,
+      "type": "node",
+      "osmId": "osm-3373203093",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Madduramma Temple",
+        "name:kn=ಮದ್ದೂರಮ್ಮ ದೇವಸ್ಥಾನ",
+        "religion=hindu"
+      ],
+      "parentCity": "Maddur",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Lakshmi Devi Temple",
+      "lat": 16.3940079,
+      "lon": 74.938268,
+      "type": "node",
+      "osmId": "osm-7708935637",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Lakshmi Devi Temple",
+        "name:kn=ಲಕ್ಷ್ಮೀದೇವಿ ದೇವಸ್ಥಾನ",
+        "religion=hindu"
+      ],
+      "parentCity": "Mudalagi",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Mouneshwar Temple",
+      "lat": 16.3939305,
+      "lon": 74.9388424,
+      "type": "node",
+      "osmId": "osm-7708935638",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Mouneshwar Temple",
+        "religion=hindu"
+      ],
+      "parentCity": "Mudalagi",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Sadashiva Temple",
+      "lat": 16.392879,
+      "lon": 74.9367298,
+      "type": "node",
+      "osmId": "osm-7708950182",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Sadashiva Temple",
+        "religion=hindu"
+      ],
+      "parentCity": "Mudalagi",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Amoghasiddeshwar Temple",
+      "lat": 16.3951604,
+      "lon": 74.934999,
+      "type": "node",
+      "osmId": "osm-7708950183",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Amoghasiddeshwar Temple",
+        "religion=hindu"
+      ],
+      "parentCity": "Mudalagi",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Durgadevi Temple",
+      "lat": 16.3936882,
+      "lon": 74.9407033,
+      "type": "node",
+      "osmId": "osm-7708950184",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Durgadevi Temple",
+        "name:kn=ದುರ್ಗದೇವಿ",
+        "religion=hindu"
+      ],
+      "parentCity": "Mudalagi",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Hanuman Temple",
+      "lat": 16.3942595,
+      "lon": 74.9404619,
+      "type": "node",
+      "osmId": "osm-7708961085",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Hanuman Temple",
+        "religion=hindu"
+      ],
+      "parentCity": "Mudalagi",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Mallikarjun Temple",
+      "lat": 16.3939816,
+      "lon": 74.9402446,
+      "type": "node",
+      "osmId": "osm-7708961086",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Mallikarjun Temple",
+        "religion=hindu"
+      ],
+      "parentCity": "Mudalagi",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Battle of Talikote",
+      "lat": 16.1948087,
+      "lon": 76.1916898,
+      "type": "node",
+      "osmId": "osm-2544809428",
+      "category": "battlefield",
+      "tags": [
+        "alt_name=Battle of Rakshasi - Tangadagi",
+        "historic=battlefield",
+        "name=Battle of Talikote",
+        "name:kn=ತಾಳೀಕೋಟೆಯ ಯುದ್ಧ",
+        "note=Approximate location, the battle was spread over a wide area, nowhere near Talikote"
+      ],
+      "parentCity": "Muddebihal",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Kengel Anjaneyaswamy Temple",
+      "lat": 12.6873143,
+      "lon": 77.2346377,
+      "type": "node",
+      "osmId": "osm-2589199966",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Kengel Anjaneyaswamy Temple",
+        "name:kn=ಅಂಜನೇಯ ಸ್ವಾಮಿ ದೇವಾಲಯ",
+        "religion=hindu"
+      ],
+      "parentCity": "Ramanagaram",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Manteswamy Temple",
+      "lat": 12.6739837,
+      "lon": 77.3240423,
+      "type": "node",
+      "osmId": "osm-3793014524",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Ramanagara Taluk and District",
+        "addr:postcode=562159",
+        "addr:street=Gowdayyanadoddi",
+        "amenity=place_of_worship",
+        "name=Manteswamy Temple",
+        "name:kn=ಮಂಟೆಸ್ವಾಮಿ ದೇವಸ್ಥಾನ",
+        "religion=hindu"
+      ],
+      "parentCity": "Ramanagaram",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Shanimahatma Swamy Temple",
+      "lat": 12.6723252,
+      "lon": 77.3268481,
+      "type": "node",
+      "osmId": "osm-3793015723",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=Ramanagara taluk and district",
+        "addr:postcode=562159",
+        "addr:street=Gowdayyanadoddi",
+        "amenity=place_of_worship",
+        "name=Shanimahatma Swamy Temple",
+        "name:kn=ಶನಿಮಹಾತ್ಮ",
+        "religion=hindu"
+      ],
+      "parentCity": "Ramanagaram",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Shilpamala",
+      "lat": 12.7013358,
+      "lon": 77.2523143,
+      "type": "node",
+      "osmId": "osm-4564737691",
+      "category": "museum",
+      "tags": [
+        "description=Inside Janapada Loka",
+        "name=Shilpamala",
+        "name:kn=ಶಿಲ್ಪಮಾಲ",
+        "opening_hours=We-Mo 09:00-17:30",
+        "tourism=museum"
+      ],
+      "parentCity": "Ramanagaram",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Chitra Kuteera",
+      "lat": 12.7011743,
+      "lon": 77.2524576,
+      "type": "node",
+      "osmId": "osm-4688975145",
+      "category": "gallery",
+      "tags": [
+        "artwork_type=photo",
+        "name=Chitra Kuteera",
+        "name:kn=ಚಿತ್ರ ಕುಟೀರ",
+        "tourism=gallery"
+      ],
+      "parentCity": "Ramanagaram",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Loka Mahal",
+      "lat": 12.7013244,
+      "lon": 77.2520994,
+      "type": "node",
+      "osmId": "osm-4688975151",
+      "category": "gallery",
+      "tags": [
+        "artwork_type=sculpture",
+        "name=Loka Mahal",
+        "name:kn=ಲೋಕ ಮಹಲ್",
+        "operator=Janapada Loka",
+        "tourism=gallery"
+      ],
+      "parentCity": "Ramanagaram",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Aayagararamala",
+      "lat": 12.701639,
+      "lon": 77.2517106,
+      "type": "node",
+      "osmId": "osm-4688975152",
+      "category": "gallery",
+      "tags": [
+        "artwork_type=installation",
+        "name=Aayagararamala",
+        "name:kn=ಆಯಾಗಾರರ ಮಾಲ",
+        "operator=Janapada Loka",
+        "tourism=gallery"
+      ],
+      "parentCity": "Ramanagaram",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Alasuru Chariot",
+      "lat": 12.7011692,
+      "lon": 77.2522585,
+      "type": "node",
+      "osmId": "osm-4689007384",
+      "category": "artwork",
+      "tags": [
+        "artwork_type=stone",
+        "name=Alasuru Chariot",
+        "name:kn=ಅಲಸೂರು ರಥ",
+        "tourism=artwork"
+      ],
+      "parentCity": "Ramanagaram",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Handigundi",
+      "lat": 12.7263172,
+      "lon": 77.3152569,
+      "type": "node",
+      "osmId": "osm-8994102636",
+      "category": "viewpoint",
+      "tags": [
+        "ele=985",
+        "name=Handigundi",
+        "name:kn=ಹಂದಿಗುಂಡಿ",
+        "natural=peak",
+        "tourism=viewpoint"
+      ],
+      "elevation": 985,
+      "parentCity": "Ramanagaram",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Muthurayaswamy Betta",
+      "lat": 12.7091566,
+      "lon": 77.3096322,
+      "type": "node",
+      "osmId": "osm-8994102637",
+      "category": "viewpoint",
+      "tags": [
+        "ele=916",
+        "name=Muthurayaswamy Betta",
+        "name:kn=ಮುತ್ತುರಾಯಸ್ವಾಮಿ ಬೆಟ್ಟ",
+        "natural=peak",
+        "tourism=viewpoint"
+      ],
+      "elevation": 916,
+      "parentCity": "Ramanagaram",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Ramadevara Betta Vulture Sanctuary (Sholay Shooting spot)",
+      "lat": 12.7531073,
+      "lon": 77.303161,
+      "type": "node",
+      "osmId": "osm-8994102639",
+      "category": "viewpoint",
+      "tags": [
+        "ele=912",
+        "name=Ramadevara Betta Vulture Sanctuary (Sholay Shooting spot)",
+        "name:kn=ರಾಮದೇವರ ಬೆಟ್ಟ",
+        "natural=peak",
+        "tourism=viewpoint"
+      ],
+      "elevation": 912,
+      "parentCity": "Ramanagaram",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Kunagalu Betta",
+      "lat": 12.6897575,
+      "lon": 77.3182622,
+      "type": "node",
+      "osmId": "osm-12098253210",
+      "category": "viewpoint",
+      "tags": [
+        "ele=859",
+        "name=Kunagalu Betta",
+        "name:kn=ಕುಣಗಲು ಬೆಟ್ಟ",
+        "natural=peak",
+        "tourism=viewpoint"
+      ],
+      "elevation": 859,
+      "parentCity": "Ramanagaram",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Achhalu Betta",
+      "lat": 12.692499,
+      "lon": 77.2892804,
+      "type": "node",
+      "osmId": "osm-13372035504",
+      "category": "peak",
+      "tags": [
+        "ele=886",
+        "name=Achhalu Betta",
+        "natural=peak"
+      ],
+      "elevation": 886,
+      "parentCity": "Ramanagaram",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Mahadev Mandir",
+      "lat": 16.221153,
+      "lon": 74.4292184,
+      "type": "node",
+      "osmId": "osm-10281741182",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:housenumber=Nilagi Road,Nool",
+        "amenity=place_of_worship",
+        "name=Mahadev Mandir",
+        "religion=hindu"
+      ],
+      "parentCity": "Sankeshwara",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Hanuman mandir",
+      "lat": 16.2165729,
+      "lon": 74.4952185,
+      "type": "node",
+      "osmId": "osm-12400738061",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Hanuman mandir",
+        "religion=hindu"
+      ],
+      "parentCity": "Sankeshwara",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Vitthal mandir",
+      "lat": 16.2166735,
+      "lon": 74.494972,
+      "type": "node",
+      "osmId": "osm-12400738062",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Vitthal mandir",
+        "religion=hindu"
+      ],
+      "parentCity": "Sankeshwara",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Wakadaai mandir",
+      "lat": 16.2180965,
+      "lon": 74.4968144,
+      "type": "node",
+      "osmId": "osm-12400738063",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Wakadaai mandir",
+        "religion=hindu"
+      ],
+      "parentCity": "Sankeshwara",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Kottala Basweshwara temple",
+      "lat": 17.1807885,
+      "lon": 77.2895887,
+      "type": "node",
+      "osmId": "osm-2460054693",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Kottala Basweshwara temple",
+        "name:kn=ಕೊತ್ತಲ ಬಸವೇಶ್ವರ ದೇವಸ್ಥಾನ",
+        "religion=hindu"
+      ],
+      "parentCity": "Sedam",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Hanuman Temple",
+      "lat": 17.1803427,
+      "lon": 77.2855035,
+      "type": "node",
+      "osmId": "osm-2460055602",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Hanuman Temple",
+        "name:kn=ಹನುಮಂತ ದೇವಸ್ಥಾನ",
+        "religion=hindu",
+        "wheelchair=yes"
+      ],
+      "parentCity": "Sedam",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Vasavadatta Temple",
+      "lat": 17.1560173,
+      "lon": 77.2857302,
+      "type": "node",
+      "osmId": "osm-2460059093",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Vasavadatta Temple",
+        "name:kn=ವಾಸವದತ್ತ ದೇವಸ್ಥಾನ",
+        "religion=hindu"
+      ],
+      "parentCity": "Sedam",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Panduranga",
+      "lat": 17.1772837,
+      "lon": 77.2909978,
+      "type": "node",
+      "osmId": "osm-2460080450",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Panduranga",
+        "name:kn=ಪಾಂಡುರಂಗ",
+        "religion=hindu"
+      ],
+      "parentCity": "Sedam",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Panchalingeshwara Temple",
+      "lat": 17.176438,
+      "lon": 77.292285,
+      "type": "node",
+      "osmId": "osm-2460080780",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Panchalingeshwara Temple",
+        "name:kn=ಪಂಚಲಿಂಗೇಶ್ವರ ದೇವಸ್ಥಾನ",
+        "religion=hindu"
+      ],
+      "parentCity": "Sedam",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Markaz Masjid E Mahmood Madina Nagar Mominpura Kurgunta City",
+      "lat": 17.191789,
+      "lon": 77.358319,
+      "type": "node",
+      "osmId": "osm-8196832191",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:full=Kurgunta, Karnataka",
+        "addr:state=Karnataka",
+        "amenity=place_of_worship",
+        "name=Markaz Masjid E Mahmood Madina Nagar Mominpura Kurgunta City",
+        "religion=muslim"
+      ],
+      "parentCity": "Sedam",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Huda Masjid",
+      "lat": 17.1766828,
+      "lon": 77.2757399,
+      "type": "node",
+      "osmId": "osm-8196832206",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:full=SH 15, Rehmath Nagar, Sedam, Karnataka",
+        "addr:state=Karnataka",
+        "amenity=place_of_worship",
+        "name=Huda Masjid",
+        "name:kn=ಹೂಡ ಮಸ್ಜಿದ್",
+        "religion=muslim"
+      ],
+      "parentCity": "Sedam",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Sedam Fort",
+      "lat": 17.1794537,
+      "lon": 77.2916651,
+      "type": "node",
+      "osmId": "osm-13638718116",
+      "category": "fort",
+      "tags": [
+        "historic=fort",
+        "name=Sedam Fort"
+      ],
+      "parentCity": "Sedam",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Bilal Masjid",
+      "lat": 16.4737792,
+      "lon": 76.3084971,
+      "type": "node",
+      "osmId": "osm-8196833259",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:full=Talikoti, Karnataka",
+        "addr:state=Karnataka",
+        "amenity=place_of_worship",
+        "name=Bilal Masjid",
+        "name:kn=ಬಿಲಾಲ್ ಮಸ್ಜಿದ್",
+        "religion=muslim"
+      ],
+      "parentCity": "Talikota",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Mahaganapati Temple",
+      "lat": 14.5432584,
+      "lon": 74.3172282,
+      "type": "node",
+      "osmId": "osm-1384210409",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Mahaganapati Temple",
+        "name:kn=ಮಹಾಗಣಪತಿ ದೇವಾಲಯ",
+        "religion=hindu"
+      ],
+      "parentCity": "Gokarna",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Aganashini",
+      "lat": 14.5132385,
+      "lon": 74.3669581,
+      "type": "node",
+      "osmId": "osm-2589482422",
+      "category": "peak",
+      "tags": [
+        "ele=125",
+        "name=Aganashini",
+        "name:kn=ಅಘನಾಶಿನಿ",
+        "natural=peak"
+      ],
+      "elevation": 125,
+      "parentCity": "Gokarna",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Cave",
+      "lat": 14.5352647,
+      "lon": 74.3114631,
+      "type": "node",
+      "osmId": "osm-3696894512",
+      "category": "cave_entrance",
+      "tags": [
+        "name=Cave",
+        "natural=cave_entrance"
+      ],
+      "parentCity": "Gokarna",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Shiva cave",
+      "lat": 14.5348968,
+      "lon": 74.3172042,
+      "type": "node",
+      "osmId": "osm-3696894523",
+      "category": "cave_entrance",
+      "tags": [
+        "name=Shiva cave",
+        "name:kn=ಶಿವ ಗುಹೆ",
+        "natural=cave_entrance"
+      ],
+      "parentCity": "Gokarna",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Fort Kagala",
+      "lat": 14.5060296,
+      "lon": 74.3573534,
+      "type": "node",
+      "osmId": "osm-3895155048",
+      "category": "castle",
+      "tags": [
+        "historic=castle",
+        "name=Fort Kagala",
+        "name:kn=ಕಾಗಲ ಕೋಟೆ",
+        "note=Kagal Fort is a an ancient fort which has been forgotten by many. But the ruins still exist."
+      ],
+      "parentCity": "Gokarna",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Kudle Beach View",
+      "lat": 14.5318607,
+      "lon": 74.3223228,
+      "type": "node",
+      "osmId": "osm-5412163621",
+      "category": "viewpoint",
+      "tags": [
+        "name=Kudle Beach View",
+        "tourism=viewpoint"
+      ],
+      "parentCity": "Gokarna",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Cove Kagala",
+      "lat": 14.5099467,
+      "lon": 74.3585747,
+      "type": "node",
+      "osmId": "osm-5891899116",
+      "category": "beach",
+      "tags": [
+        "name=Cove Kagala",
+        "natural=beach",
+        "surface=sand"
+      ],
+      "parentCity": "Gokarna",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Hindu Temple",
+      "lat": 14.5267252,
+      "lon": 74.3541015,
+      "type": "node",
+      "osmId": "osm-6860511085",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Hindu Temple"
+      ],
+      "parentCity": "Gokarna",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Shri Subrahmanya Temple",
+      "lat": 14.542686,
+      "lon": 74.3201183,
+      "type": "node",
+      "osmId": "osm-8121213721",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Shri Subrahmanya Temple"
+      ],
+      "parentCity": "Gokarna",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Sunset view",
+      "lat": 14.5352126,
+      "lon": 74.3121693,
+      "type": "node",
+      "osmId": "osm-11427758969",
+      "category": "viewpoint",
+      "tags": [
+        "name=Sunset view",
+        "name:ru=Красивые закаты",
+        "tourism=viewpoint"
+      ],
+      "parentCity": "Gokarna",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Sunrise",
+      "lat": 14.5384705,
+      "lon": 74.3122567,
+      "type": "node",
+      "osmId": "osm-11527450870",
+      "category": "viewpoint",
+      "tags": [
+        "name=Sunrise",
+        "name:ru=Рассвет на горе",
+        "tourism=viewpoint"
+      ],
+      "parentCity": "Gokarna",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Road to mount",
+      "lat": 14.5158959,
+      "lon": 74.3587888,
+      "type": "node",
+      "osmId": "osm-11533168669",
+      "category": "viewpoint",
+      "tags": [
+        "name=Road to mount",
+        "name:ru=Тропа на гору",
+        "tourism=viewpoint"
+      ],
+      "parentCity": "Gokarna",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Lake",
+      "lat": 14.5415972,
+      "lon": 74.3256803,
+      "type": "node",
+      "osmId": "osm-11555964669",
+      "category": "viewpoint",
+      "tags": [
+        "name=Lake",
+        "name:ru=Озеро",
+        "tourism=viewpoint"
+      ],
+      "parentCity": "Gokarna",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Chariot",
+      "lat": 14.543491,
+      "lon": 74.3176002,
+      "type": "node",
+      "osmId": "osm-11609984369",
+      "category": "attraction",
+      "tags": [
+        "name=Chariot",
+        "tourism=attraction"
+      ],
+      "parentCity": "Gokarna",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Mukti Mantapa",
+      "lat": 14.5412156,
+      "lon": 74.3198058,
+      "type": "node",
+      "osmId": "osm-11618582169",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Mukti Mantapa",
+        "religion=hindu"
+      ],
+      "parentCity": "Gokarna",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Kudle Beach View",
+      "lat": 14.5303803,
+      "lon": 74.3224384,
+      "type": "node",
+      "osmId": "osm-13357439119",
+      "category": "viewpoint",
+      "tags": [
+        "name=Kudle Beach View",
+        "tourism=viewpoint"
+      ],
+      "parentCity": "Gokarna",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Rudrapada Temple",
+      "lat": 14.5609602,
+      "lon": 74.3116149,
+      "type": "node",
+      "osmId": "osm-13371604068",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Rudrapada Temple",
+        "religion=hindu"
+      ],
+      "parentCity": "Gokarna",
+      "parentState": "Karnataka"
+    },
+    {
+      "name": "Kariyappa Katta Temple",
+      "lat": 14.5571881,
+      "lon": 74.3091766,
+      "type": "node",
+      "osmId": "osm-13371635580",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Kariyappa Katta Temple",
+        "religion=hindu"
+      ],
+      "parentCity": "Gokarna",
+      "parentState": "Karnataka"
+    }
+  ]
+}

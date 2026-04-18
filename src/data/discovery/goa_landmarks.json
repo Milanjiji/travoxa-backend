@@ -1,0 +1,2124 @@
+{
+  "state": "Goa",
+  "lastUpdated": "2026-03-31T16:57:41.771Z",
+  "source": "local_india_locations_json",
+  "totalLandmarks": 139,
+  "landmarks": [
+    {
+      "name": "Colva Beach",
+      "lat": 15.2756507,
+      "lon": 73.9137265,
+      "type": "node",
+      "osmId": "osm-493623284",
+      "category": "beach",
+      "tags": [
+        "name=Colva Beach",
+        "natural=beach"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Our Lady of Lourdes Church, Utorda",
+      "lat": 15.32496,
+      "lon": 73.9133496,
+      "type": "node",
+      "osmId": "osm-1633026612",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "denomination=roman_catholic",
+        "name=Our Lady of Lourdes Church, Utorda",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Holy Cross Chapell",
+      "lat": 15.2486329,
+      "lon": 73.9269784,
+      "type": "node",
+      "osmId": "osm-1715059925",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "denomination=catholic",
+        "name=Holy Cross Chapell",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Maruthi Mandhir",
+      "lat": 15.2763603,
+      "lon": 73.9814325,
+      "type": "node",
+      "osmId": "osm-2082435927",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Maruthi Mandhir",
+        "religion=hindu"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Our Lady of Remedios",
+      "lat": 15.3009985,
+      "lon": 73.9205595,
+      "type": "node",
+      "osmId": "osm-2634447589",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Our Lady of Remedios",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Fatrade Beach",
+      "lat": 15.2079045,
+      "lon": 73.9326021,
+      "type": "node",
+      "osmId": "osm-2635792322",
+      "category": "beach",
+      "tags": [
+        "name=Fatrade Beach",
+        "natural=beach"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Varca Beach",
+      "lat": 15.2321443,
+      "lon": 73.9259238,
+      "type": "node",
+      "osmId": "osm-2635792802",
+      "category": "beach",
+      "tags": [
+        "name=Varca Beach",
+        "natural=beach"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Betalbatim Beach",
+      "lat": 15.2931923,
+      "lon": 73.9077452,
+      "type": "node",
+      "osmId": "osm-2637221112",
+      "category": "beach",
+      "tags": [
+        "name=Betalbatim Beach",
+        "natural=beach",
+        "wikidata=Q26793788"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Sait Roque Church",
+      "lat": 15.2137606,
+      "lon": 73.9394567,
+      "type": "node",
+      "osmId": "osm-2663467231",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Sait Roque Church",
+        "name:en=Saint Roque Church",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "St. Francis",
+      "lat": 15.2448443,
+      "lon": 73.9719767,
+      "type": "node",
+      "osmId": "osm-2695042472",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "building=chapel",
+        "name=St. Francis",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Sunset Beach",
+      "lat": 15.3010263,
+      "lon": 73.9050309,
+      "type": "node",
+      "osmId": "osm-3289901179",
+      "category": "beach",
+      "tags": [
+        "name=Sunset Beach",
+        "natural=beach"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "St. Sebastian's Chapel",
+      "lat": 15.218943,
+      "lon": 73.97823,
+      "type": "node",
+      "osmId": "osm-4107601497",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:street=15.218943,73.97823",
+        "amenity=place_of_worship",
+        "name=St. Sebastian's Chapel",
+        "religion=christian"
+      ],
+      "parentCity": "Margao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Carmelite Monastery",
+      "lat": 15.271816,
+      "lon": 73.96569,
+      "type": "node",
+      "osmId": "osm-4109577090",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Carmelite Monastery",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Saint Anthony's Chapel Deussua",
+      "lat": 15.217188,
+      "lon": 73.96917,
+      "type": "node",
+      "osmId": "osm-4114503036",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Saint Anthony's Chapel Deussua",
+        "religion=christian"
+      ],
+      "parentCity": "Margao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Shaikh Marbles and Artwork",
+      "lat": 15.27051,
+      "lon": 73.95501,
+      "type": "node",
+      "osmId": "osm-4230476993",
+      "category": "artwork",
+      "tags": [
+        "name=Shaikh Marbles and Artwork",
+        "tourism=artwork"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "St. Rita's Church",
+      "lat": 15.2910005,
+      "lon": 74.0070427,
+      "type": "node",
+      "osmId": "osm-4235120292",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=St. Rita's Church",
+        "religion=christian"
+      ],
+      "parentCity": "Margao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Our Lady Of Snow Church",
+      "lat": 15.3139614,
+      "lon": 73.9847343,
+      "type": "node",
+      "osmId": "osm-4236982493",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Our Lady Of Snow Church",
+        "religion=christian"
+      ],
+      "parentCity": "Margao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Rayeshwar Temple",
+      "lat": 15.3197341,
+      "lon": 73.9842426,
+      "type": "node",
+      "osmId": "osm-4236997193",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Rayeshwar Temple",
+        "religion=hindu"
+      ],
+      "parentCity": "Margao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "St. Francis Xavier Chapel",
+      "lat": 15.326421,
+      "lon": 73.98989,
+      "type": "node",
+      "osmId": "osm-4237013791",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=St. Francis Xavier Chapel",
+        "religion=christian"
+      ],
+      "parentCity": "Margao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Our Lady of Fatima Chapel",
+      "lat": 15.33023,
+      "lon": 73.95434,
+      "type": "node",
+      "osmId": "osm-4242322089",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Our Lady of Fatima Chapel",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Our Lady of Piety",
+      "lat": 15.2406196,
+      "lon": 73.9411367,
+      "type": "node",
+      "osmId": "osm-4252577291",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Our Lady of Piety",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Monte Hill Viewpoint",
+      "lat": 15.2798058,
+      "lon": 73.9625311,
+      "type": "node",
+      "osmId": "osm-4269324291",
+      "category": "viewpoint",
+      "tags": [
+        "name=Monte Hill Viewpoint",
+        "tourism=viewpoint"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Goa Chitra museum",
+      "lat": 15.2648205,
+      "lon": 73.9413442,
+      "type": "node",
+      "osmId": "osm-4270037210",
+      "category": "museum",
+      "tags": [
+        "name=Goa Chitra museum",
+        "tourism=museum",
+        "wikidata=Q5575071"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Ashvek Vintage world- Car Museum",
+      "lat": 15.3208441,
+      "lon": 73.9416552,
+      "type": "node",
+      "osmId": "osm-4270038692",
+      "category": "museum",
+      "tags": [
+        "name=Ashvek Vintage world- Car Museum",
+        "tourism=museum"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Techspots",
+      "lat": 15.2831,
+      "lon": 73.9765,
+      "type": "node",
+      "osmId": "osm-4270045092",
+      "category": "museum",
+      "tags": [
+        "name=Techspots",
+        "tourism=museum"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Holy Cross (Vollant)",
+      "lat": 15.307054,
+      "lon": 73.917244,
+      "type": "node",
+      "osmId": "osm-4271954996",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Holy Cross (Vollant)",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Carpe Diem",
+      "lat": 15.31292,
+      "lon": 73.912254,
+      "type": "node",
+      "osmId": "osm-4283767989",
+      "category": "artwork",
+      "tags": [
+        "name=Carpe Diem",
+        "tourism=artwork"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "DSouza Mansion",
+      "lat": 15.248037,
+      "lon": 73.950905,
+      "type": "node",
+      "osmId": "osm-4288726489",
+      "category": "attraction",
+      "tags": [
+        "name=DSouza Mansion",
+        "tourism=attraction"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Our Lady of Rosary Chapel",
+      "lat": 15.291057,
+      "lon": 73.961639,
+      "type": "node",
+      "osmId": "osm-4295600692",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Our Lady of Rosary Chapel",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "St Sebastin Chapel",
+      "lat": 15.32059,
+      "lon": 73.929184,
+      "type": "node",
+      "osmId": "osm-4296329897",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=St Sebastin Chapel",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Christ Rei Chapel",
+      "lat": 15.308122,
+      "lon": 73.91147,
+      "type": "node",
+      "osmId": "osm-4296790798",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Christ Rei Chapel",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Capela de Nossa Senhora da Piedade",
+      "lat": 15.305422,
+      "lon": 73.9169,
+      "type": "node",
+      "osmId": "osm-4296792389",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Capela de Nossa Senhora da Piedade",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Tamil Methodist Church",
+      "lat": 15.276296,
+      "lon": 73.96435,
+      "type": "node",
+      "osmId": "osm-4298743994",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Tamil Methodist Church",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Derasar",
+      "lat": 15.273318,
+      "lon": 73.96375,
+      "type": "node",
+      "osmId": "osm-4298747701",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Derasar"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Our Lady of Monsaratte Chapel",
+      "lat": 15.308368,
+      "lon": 73.9667,
+      "type": "node",
+      "osmId": "osm-4298772289",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Our Lady of Monsaratte Chapel",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Mae de Deus Church",
+      "lat": 15.341263,
+      "lon": 73.975332,
+      "type": "node",
+      "osmId": "osm-4299439408",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Mae de Deus Church",
+        "religion=christian"
+      ],
+      "parentCity": "Margao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Our Lady of Mount Carmel Chapel, Mungul",
+      "lat": 15.281885,
+      "lon": 73.9483,
+      "type": "node",
+      "osmId": "osm-4303624693",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Our Lady of Mount Carmel Chapel, Mungul",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Seashells",
+      "lat": 15.318878,
+      "lon": 73.942389,
+      "type": "node",
+      "osmId": "osm-4307049589",
+      "category": "artwork",
+      "tags": [
+        "name=Seashells",
+        "tourism=artwork"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Milsim Goa PaintBall",
+      "lat": 15.32193,
+      "lon": 73.939759,
+      "type": "node",
+      "osmId": "osm-4307051289",
+      "category": "attraction",
+      "tags": [
+        "name=Milsim Goa PaintBall",
+        "tourism=attraction"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "St. Anthony Chapel",
+      "lat": 15.337349,
+      "lon": 73.9877,
+      "type": "node",
+      "osmId": "osm-4307338092",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=St. Anthony Chapel",
+        "religion=christian"
+      ],
+      "parentCity": "Margao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "St. Sebastian Chapel",
+      "lat": 15.335702,
+      "lon": 73.98597,
+      "type": "node",
+      "osmId": "osm-4307338093",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=St. Sebastian Chapel",
+        "religion=christian"
+      ],
+      "parentCity": "Margao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Our Lady of Candelaria",
+      "lat": 15.332993,
+      "lon": 73.988928,
+      "type": "node",
+      "osmId": "osm-4307352694",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Our Lady of Candelaria",
+        "religion=christian"
+      ],
+      "parentCity": "Margao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "St. Sebastian Chapel",
+      "lat": 15.335647,
+      "lon": 73.98918,
+      "type": "node",
+      "osmId": "osm-4307397889",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=St. Sebastian Chapel",
+        "religion=christian"
+      ],
+      "parentCity": "Margao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Ambora Spring",
+      "lat": 15.336471,
+      "lon": 73.9889,
+      "type": "node",
+      "osmId": "osm-4307398589",
+      "category": "attraction",
+      "tags": [
+        "name=Ambora Spring",
+        "tourism=attraction"
+      ],
+      "parentCity": "Margao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Our Lady of Enfermous Chapel",
+      "lat": 15.252638,
+      "lon": 73.95046,
+      "type": "node",
+      "osmId": "osm-4308356589",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Our Lady of Enfermous Chapel",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "St. Francis Xavier Cross (Mandopa)",
+      "lat": 15.252006,
+      "lon": 73.98063,
+      "type": "node",
+      "osmId": "osm-4321016792",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=St. Francis Xavier Cross (Mandopa)",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Our Lady of Fatima Church",
+      "lat": 15.2594385,
+      "lon": 73.99367,
+      "type": "node",
+      "osmId": "osm-4321025191",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Our Lady of Fatima Church",
+        "religion=christian"
+      ],
+      "parentCity": "Margao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Paradise Farm",
+      "lat": 15.2927611,
+      "lon": 73.9623458,
+      "type": "node",
+      "osmId": "osm-4326450522",
+      "category": "attraction",
+      "tags": [
+        "name=Paradise Farm",
+        "tourism=attraction"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Santa Cruz Chapel Church",
+      "lat": 15.26899,
+      "lon": 73.96347,
+      "type": "node",
+      "osmId": "osm-4336604590",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Santa Cruz Chapel Church",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Damodar Temple",
+      "lat": 15.280375,
+      "lon": 73.957085,
+      "type": "node",
+      "osmId": "osm-4344398693",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Damodar Temple",
+        "religion=hindu"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Virginkar Park",
+      "lat": 15.27455,
+      "lon": 73.98199,
+      "type": "node",
+      "osmId": "osm-4378315391",
+      "category": "attraction",
+      "tags": [
+        "name=Virginkar Park",
+        "name:en=Virginkar Park",
+        "tourism=attraction"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Eden Gardens",
+      "lat": 15.31028,
+      "lon": 73.91052,
+      "type": "node",
+      "osmId": "osm-4378354689",
+      "category": "attraction",
+      "tags": [
+        "name=Eden Gardens",
+        "name:en=Eden Gardens",
+        "tourism=attraction"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Sri Damodar Temple",
+      "lat": 15.276261,
+      "lon": 73.9570004,
+      "type": "node",
+      "osmId": "osm-4395615793",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Sri Damodar Temple",
+        "name:en=Sri Damodar Temple",
+        "religion=hindu"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Art escape",
+      "lat": 15.23762,
+      "lon": 73.94032,
+      "type": "node",
+      "osmId": "osm-4395615797",
+      "category": "artwork",
+      "tags": [
+        "name=Art escape",
+        "name:en=Art escape",
+        "tourism=artwork"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Our Lady of Perpetual Succour Chapel",
+      "lat": 15.3146342,
+      "lon": 73.9433222,
+      "type": "node",
+      "osmId": "osm-4535189412",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Our Lady of Perpetual Succour Chapel",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Carmelite Convent",
+      "lat": 15.309324,
+      "lon": 73.9458034,
+      "type": "node",
+      "osmId": "osm-4548726791",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Carmelite Convent",
+        "name:en=Carmelite Convent",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Perpetual Gardens",
+      "lat": 15.3087004,
+      "lon": 73.9048479,
+      "type": "node",
+      "osmId": "osm-4560525896",
+      "category": "attraction",
+      "tags": [
+        "name=Perpetual Gardens",
+        "name:en=Perpetual Gardens",
+        "tourism=attraction"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Carat Handicrafts",
+      "lat": 15.2407279,
+      "lon": 73.9410949,
+      "type": "node",
+      "osmId": "osm-4574847289",
+      "category": "artwork",
+      "tags": [
+        "name=Carat Handicrafts",
+        "name:en=Carat Handicrafts",
+        "tourism=artwork"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Wayside cross",
+      "lat": 15.2214635,
+      "lon": 73.9414873,
+      "type": "node",
+      "osmId": "osm-4579053197",
+      "category": "artwork",
+      "tags": [
+        "name=Wayside cross",
+        "name:en=Wayside cross",
+        "tourism=artwork"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Wayside cross",
+      "lat": 15.3012061,
+      "lon": 73.920764,
+      "type": "node",
+      "osmId": "osm-4582412391",
+      "category": "attraction",
+      "tags": [
+        "name=Wayside cross",
+        "name:en=Wayside cross",
+        "tourism=attraction"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Holy Cross(Sant Khuris)",
+      "lat": 15.2111719,
+      "lon": 73.9811592,
+      "type": "node",
+      "osmId": "osm-4583478105",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "denomination=roman_catholic",
+        "name=Holy Cross(Sant Khuris)",
+        "religion=christian"
+      ],
+      "parentCity": "Margao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Our Lady of Hope Church",
+      "lat": 15.2118261,
+      "lon": 73.9773994,
+      "type": "node",
+      "osmId": "osm-4583478530",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "denomination=roman_catholic",
+        "name=Our Lady of Hope Church",
+        "religion=christian"
+      ],
+      "parentCity": "Margao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Saint Anthony's Chapel",
+      "lat": 15.2160977,
+      "lon": 73.9490783,
+      "type": "node",
+      "osmId": "osm-4611251192",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Saint Anthony's Chapel",
+        "name:en=Saint Anthony's Chapel",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Handicraft shop",
+      "lat": 15.2598863,
+      "lon": 73.9265555,
+      "type": "node",
+      "osmId": "osm-4620113790",
+      "category": "artwork",
+      "tags": [
+        "name=Handicraft shop",
+        "name:en=Handicraft shop",
+        "tourism=artwork"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "The Gift emporium",
+      "lat": 15.2597713,
+      "lon": 73.9265165,
+      "type": "node",
+      "osmId": "osm-4620113895",
+      "category": "artwork",
+      "tags": [
+        "name=The Gift emporium",
+        "name:en=The Gift emporium",
+        "tourism=artwork"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Madrasa Jama Masjid",
+      "lat": 15.2703504,
+      "lon": 73.9645462,
+      "type": "node",
+      "osmId": "osm-4623101400",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Madrasa Jama Masjid",
+        "religion=muslim"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Mother Mary Statue",
+      "lat": 15.2733372,
+      "lon": 73.9586035,
+      "type": "node",
+      "osmId": "osm-4624875293",
+      "category": "artwork",
+      "tags": [
+        "artwork_type=statue",
+        "name=Mother Mary Statue",
+        "name:en=Mother Mary Statue",
+        "tourism=artwork"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Mother Mary of Vailankanni",
+      "lat": 15.2719332,
+      "lon": 73.9578988,
+      "type": "node",
+      "osmId": "osm-4624875294",
+      "category": "artwork",
+      "tags": [
+        "name=Mother Mary of Vailankanni",
+        "name:en=Mother Mary of Vailankanni",
+        "tourism=artwork"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Statue of Miguel De Loyola Furtado",
+      "lat": 15.2725001,
+      "lon": 73.9588524,
+      "type": "node",
+      "osmId": "osm-4624875789",
+      "category": "artwork",
+      "tags": [
+        "artwork_type=statue",
+        "name=Statue of Miguel De Loyola Furtado",
+        "name:en=Statue of Miguel De Loyola Furtado",
+        "tourism=artwork"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "St. Sebastian's Chapel",
+      "lat": 15.2566353,
+      "lon": 73.9705401,
+      "type": "node",
+      "osmId": "osm-4629508124",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "denomination=catholic",
+        "name=St. Sebastian's Chapel",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "St. Sebastian's Chapel",
+      "lat": 15.2762142,
+      "lon": 73.9573644,
+      "type": "node",
+      "osmId": "osm-4642152261",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=St. Sebastian's Chapel",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Sunaparanta",
+      "lat": 15.2773069,
+      "lon": 73.9614274,
+      "type": "node",
+      "osmId": "osm-4696748492",
+      "category": "artwork",
+      "tags": [
+        "name=Sunaparanta",
+        "name:en=Sunaparanta",
+        "tourism=artwork"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "St. Joseph Vaz",
+      "lat": 15.2119755,
+      "lon": 73.9772818,
+      "type": "node",
+      "osmId": "osm-4721463682",
+      "category": "artwork",
+      "tags": [
+        "name=St. Joseph Vaz",
+        "tourism=artwork"
+      ],
+      "parentCity": "Margao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Saint Anthony of Padua",
+      "lat": 15.2169717,
+      "lon": 73.9695321,
+      "type": "node",
+      "osmId": "osm-4759414824",
+      "category": "artwork",
+      "tags": [
+        "name=Saint Anthony of Padua",
+        "name:en=Saint Anthony of Padua",
+        "tourism=artwork"
+      ],
+      "parentCity": "Margao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Socos Farm",
+      "lat": 15.2172809,
+      "lon": 73.9784491,
+      "type": "node",
+      "osmId": "osm-5002443793",
+      "category": "attraction",
+      "tags": [
+        "name=Socos Farm",
+        "tourism=attraction"
+      ],
+      "parentCity": "Margao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Holy Family Chapel",
+      "lat": 15.3072831,
+      "lon": 73.9949746,
+      "type": "node",
+      "osmId": "osm-5065400570",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Holy Family Chapel",
+        "religion=christian"
+      ],
+      "parentCity": "Margao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Shri Shantadurga Chamundeshwari Temple",
+      "lat": 15.2906577,
+      "lon": 74.0197488,
+      "type": "node",
+      "osmId": "osm-5198014880",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Shri Shantadurga Chamundeshwari Temple",
+        "religion=hindu"
+      ],
+      "parentCity": "Margao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Chapel",
+      "lat": 15.2944812,
+      "lon": 73.9875363,
+      "type": "node",
+      "osmId": "osm-5198038101",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "building=chapel",
+        "name=Chapel",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Chapel",
+      "lat": 15.2219011,
+      "lon": 73.9555141,
+      "type": "node",
+      "osmId": "osm-5198063040",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "building=chapel",
+        "name=Chapel",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "The village",
+      "lat": 15.3223772,
+      "lon": 73.951471,
+      "type": "node",
+      "osmId": "osm-5363385716",
+      "category": "attraction",
+      "tags": [
+        "name=The village",
+        "tourism=attraction"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Handdi Khuris",
+      "lat": 15.2986148,
+      "lon": 74.0052161,
+      "type": "node",
+      "osmId": "osm-6263535785",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Handdi Khuris",
+        "religion=christian"
+      ],
+      "parentCity": "Margao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "St. Sebastian Chapel",
+      "lat": 15.3194661,
+      "lon": 73.9843695,
+      "type": "node",
+      "osmId": "osm-11160186810",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=St. Sebastian Chapel",
+        "religion=christian"
+      ],
+      "parentCity": "Margao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Memorial For Goan Victims of 1918 Spanish Flu",
+      "lat": 15.3129806,
+      "lon": 73.9839618,
+      "type": "node",
+      "osmId": "osm-11160193943",
+      "category": "memorial",
+      "tags": [
+        "historic=memorial",
+        "name=Memorial For Goan Victims of 1918 Spanish Flu"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Holy Paddy Field Of Raia",
+      "lat": 15.3156831,
+      "lon": 73.9861389,
+      "type": "node",
+      "osmId": "osm-11160196871",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Holy Paddy Field Of Raia"
+      ],
+      "parentCity": "Margao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Ganapathi Murugan Mandir",
+      "lat": 15.2605032,
+      "lon": 73.9873101,
+      "type": "node",
+      "osmId": "osm-11200537639",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Ganapathi Murugan Mandir",
+        "religion=hindu"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Monte Hill",
+      "lat": 15.2795641,
+      "lon": 73.9628041,
+      "type": "node",
+      "osmId": "osm-11203038388",
+      "category": "peak",
+      "tags": [
+        "name=Monte Hill",
+        "natural=peak"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "new world digital art",
+      "lat": 15.2874428,
+      "lon": 73.954365,
+      "type": "node",
+      "osmId": "osm-11309366569",
+      "category": "artwork",
+      "tags": [
+        "name=new world digital art",
+        "tourism=artwork"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Old Holy Cross",
+      "lat": 15.3136557,
+      "lon": 73.9311171,
+      "type": "node",
+      "osmId": "osm-13260122926",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "denomination=roman_catholic",
+        "name=Old Holy Cross",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Holy Cross Chapel",
+      "lat": 15.3152268,
+      "lon": 73.9303913,
+      "type": "node",
+      "osmId": "osm-13260126574",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "denomination=roman_catholic",
+        "name=Holy Cross Chapel",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Dona paula",
+      "lat": 15.4505271,
+      "lon": 73.8030641,
+      "type": "node",
+      "osmId": "osm-1328303571",
+      "category": "artwork",
+      "tags": [
+        "artist_name=Baroness Yrse Von Leistner",
+        "artwork_type=statue",
+        "name=Dona paula",
+        "start_date=1969",
+        "tourism=artwork",
+        "wikipedia=en:Dona Paula"
+      ],
+      "parentCity": "Marmagao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Ancient Cross",
+      "lat": 15.4110807,
+      "lon": 73.786133,
+      "type": "node",
+      "osmId": "osm-3734348073",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=vasco-da-gama",
+        "addr:postcode=403804",
+        "amenity=place_of_worship",
+        "denomination=catholic",
+        "name=Ancient Cross",
+        "name:ru=Древний крест",
+        "religion=christian"
+      ],
+      "parentCity": "Marmagao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Dona Paula Chapel",
+      "lat": 15.455168,
+      "lon": 73.80335,
+      "type": "node",
+      "osmId": "osm-4259954489",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Dona Paula Chapel",
+        "religion=christian"
+      ],
+      "parentCity": "Marmagao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "IPC EL-SHADDAI VASCO, GOA",
+      "lat": 15.396201,
+      "lon": 73.829515,
+      "type": "node",
+      "osmId": "osm-4286103894",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=IPC EL-SHADDAI VASCO, GOA",
+        "religion=christian"
+      ],
+      "parentCity": "Marmagao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Our Lady of Candelaria Church",
+      "lat": 15.386917,
+      "lon": 73.813054,
+      "type": "node",
+      "osmId": "osm-4294800623",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Our Lady of Candelaria Church",
+        "religion=christian"
+      ],
+      "parentCity": "Marmagao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Aquasail 360 Sailing",
+      "lat": 15.452024,
+      "lon": 73.84492,
+      "type": "node",
+      "osmId": "osm-4296789993",
+      "category": "attraction",
+      "tags": [
+        "name=Aquasail 360 Sailing",
+        "tourism=attraction"
+      ],
+      "parentCity": "Marmagao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Masjid e-Noor",
+      "lat": 15.3911989,
+      "lon": 73.8601555,
+      "type": "node",
+      "osmId": "osm-4310531851",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "denomination=shia",
+        "name=Masjid e-Noor",
+        "religion=muslim"
+      ],
+      "parentCity": "Marmagao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Our Lady of Desterro",
+      "lat": 15.3978405,
+      "lon": 73.8038432,
+      "type": "node",
+      "osmId": "osm-4818386322",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Our Lady of Desterro",
+        "religion=christian"
+      ],
+      "parentCity": "Marmagao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Siridao Beach",
+      "lat": 15.4309011,
+      "lon": 73.8620418,
+      "type": "node",
+      "osmId": "osm-5079152621",
+      "category": "attraction",
+      "tags": [
+        "name=Siridao Beach",
+        "name:en=Siridao Beach",
+        "tourism=attraction"
+      ],
+      "parentCity": "Marmagao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "India Freedom Monument",
+      "lat": 15.3990741,
+      "lon": 73.8328269,
+      "type": "node",
+      "osmId": "osm-5578251336",
+      "category": "monument",
+      "tags": [
+        "historic=monument",
+        "name=India Freedom Monument"
+      ],
+      "parentCity": "Marmagao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "St. Francis Xavier Chapel",
+      "lat": 15.471684,
+      "lon": 73.8116383,
+      "type": "node",
+      "osmId": "osm-6033859908",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "denomination=catholic",
+        "name=St. Francis Xavier Chapel",
+        "religion=christian"
+      ],
+      "parentCity": "Marmagao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Caranzalem Bay View Point",
+      "lat": 15.4596344,
+      "lon": 73.7975788,
+      "type": "node",
+      "osmId": "osm-10242095781",
+      "category": "viewpoint",
+      "tags": [
+        "description=Beautiful view point perched on a hill top, facing Caranzalem bay, accessible by motor road, cobblestoned street and 4 benches available for seating",
+        "name=Caranzalem Bay View Point",
+        "opening_hours=24/7",
+        "tourism=viewpoint"
+      ],
+      "parentCity": "Marmagao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "chapel",
+      "lat": 15.3927405,
+      "lon": 73.8293808,
+      "type": "node",
+      "osmId": "osm-13143799493",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=chapel"
+      ],
+      "parentCity": "Marmagao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Sankatmochan Mandir",
+      "lat": 15.3918535,
+      "lon": 73.8071999,
+      "type": "node",
+      "osmId": "osm-13533640212",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "check_date=2026-02-08",
+        "name=Sankatmochan Mandir",
+        "religion=hindu"
+      ],
+      "parentCity": "Marmagao",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Arossim Beach",
+      "lat": 15.3351328,
+      "lon": 73.8929125,
+      "type": "node",
+      "osmId": "osm-1002534290",
+      "category": "beach",
+      "tags": [
+        "name=Arossim Beach",
+        "natural=beach",
+        "wikidata=Q26794004"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Cansaulim Beach",
+      "lat": 15.3267818,
+      "lon": 73.8960344,
+      "type": "node",
+      "osmId": "osm-2634447577",
+      "category": "beach",
+      "tags": [
+        "name=Cansaulim Beach",
+        "natural=beach"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Utorda Beach",
+      "lat": 15.3196353,
+      "lon": 73.898934,
+      "type": "node",
+      "osmId": "osm-2634447620",
+      "category": "beach",
+      "tags": [
+        "name=Utorda Beach",
+        "name:ru=Уторда",
+        "natural=beach"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Poriebhat chapel",
+      "lat": 15.347271,
+      "lon": 73.936874,
+      "type": "node",
+      "osmId": "osm-4298768989",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Poriebhat chapel",
+        "religion=christian"
+      ],
+      "parentCity": "Colva",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Banian Tree",
+      "lat": 15.70205,
+      "lon": 73.700887,
+      "type": "node",
+      "osmId": "osm-2195478444",
+      "category": "attraction",
+      "tags": [
+        "name=Banian Tree",
+        "natural=tree",
+        "tourism=attraction"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Bhagwati Devi Temple",
+      "lat": 15.6616161,
+      "lon": 73.7361198,
+      "type": "node",
+      "osmId": "osm-2675636089",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "check_date=2026-02-01",
+        "name=Bhagwati Devi Temple",
+        "name:en=Bhagwati Devi Temple",
+        "name:mr=भगवती देवी देऊळ",
+        "religion=hindu"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Arambol Beach Mountain",
+      "lat": 15.6928174,
+      "lon": 73.6988541,
+      "type": "node",
+      "osmId": "osm-3248797373",
+      "category": "viewpoint",
+      "tags": [
+        "name=Arambol Beach Mountain",
+        "tourism=viewpoint",
+        "wheelchair=yes"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Arambol Beach Mountain",
+      "lat": 15.6933618,
+      "lon": 73.6994459,
+      "type": "node",
+      "osmId": "osm-3248805261",
+      "category": "viewpoint",
+      "tags": [
+        "name=Arambol Beach Mountain",
+        "tourism=viewpoint"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "stone art",
+      "lat": 15.6625368,
+      "lon": 73.7296538,
+      "type": "node",
+      "osmId": "osm-4084944490",
+      "category": "artwork",
+      "tags": [
+        "name=stone art",
+        "tourism=artwork"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Banyan",
+      "lat": 15.6566659,
+      "lon": 73.7218568,
+      "type": "node",
+      "osmId": "osm-4314268007",
+      "category": "attraction",
+      "tags": [
+        "name=Banyan",
+        "name:ru=баньян",
+        "natural=tree",
+        "tourism=attraction"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Bhagwati temple",
+      "lat": 15.6716532,
+      "lon": 73.7237209,
+      "type": "node",
+      "osmId": "osm-4380978378",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Bhagwati temple",
+        "religion=hindu"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Mhalasa Devi",
+      "lat": 15.6692303,
+      "lon": 73.7184143,
+      "type": "node",
+      "osmId": "osm-4380998417",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Mhalasa Devi",
+        "religion=hindu"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Karma Kagyu Buddhist Center",
+      "lat": 15.6862647,
+      "lon": 73.7130001,
+      "type": "node",
+      "osmId": "osm-4533910289",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "denomination=karma_kagyu",
+        "email=moony@indostan.ru",
+        "name=Karma Kagyu Buddhist Center",
+        "name:en=Karma Kagyu Buddhist Center",
+        "religion=buddhist"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "simoes cross",
+      "lat": 15.6328232,
+      "lon": 73.7365121,
+      "type": "node",
+      "osmId": "osm-4636891170",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=morjim",
+        "addr:postcode=403512",
+        "amenity=place_of_worship",
+        "fixme=cross",
+        "name=simoes cross",
+        "religion=christian"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Milagres Church",
+      "lat": 15.6275114,
+      "lon": 73.7407547,
+      "type": "node",
+      "osmId": "osm-4636933276",
+      "category": "place_of_worship",
+      "tags": [
+        "addr:city=morjim",
+        "addr:postcode=403512",
+        "addr:street=madhala wada road",
+        "amenity=place_of_worship",
+        "denomination=catholic",
+        "fixme=church",
+        "name=Milagres Church",
+        "religion=christian"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Ash",
+      "lat": 15.6786859,
+      "lon": 73.7063915,
+      "type": "node",
+      "osmId": "osm-4650850291",
+      "category": "attraction",
+      "tags": [
+        "name=Ash",
+        "name:en=Ash",
+        "name:ru=Эш",
+        "opening_hours=Mo-Su 09:00-22:00",
+        "tourism=attraction",
+        "wheelchair=limited"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "view place",
+      "lat": 15.6913475,
+      "lon": 73.7447692,
+      "type": "node",
+      "osmId": "osm-4808923122",
+      "category": "artwork",
+      "tags": [
+        "name=view place",
+        "name:en=view place",
+        "tourism=artwork"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Temple",
+      "lat": 15.7055247,
+      "lon": 73.7129932,
+      "type": "node",
+      "osmId": "osm-5323533121",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Temple",
+        "religion=hindu"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Ravalnath Mandir",
+      "lat": 15.6581869,
+      "lon": 73.7475396,
+      "type": "node",
+      "osmId": "osm-6100023304",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Ravalnath Mandir",
+        "religion=hindu"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Baba",
+      "lat": 15.7018311,
+      "lon": 73.7008921,
+      "type": "node",
+      "osmId": "osm-6207739028",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Baba",
+        "religion=hindu"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Big Banyan Tree",
+      "lat": 15.7004062,
+      "lon": 73.741807,
+      "type": "node",
+      "osmId": "osm-6259187186",
+      "category": "attraction",
+      "tags": [
+        "name=Big Banyan Tree",
+        "natural=tree",
+        "tourism=attraction"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Santa Cruz Chapel",
+      "lat": 15.6252585,
+      "lon": 73.739965,
+      "type": "node",
+      "osmId": "osm-6929622527",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Santa Cruz Chapel",
+        "religion=christian"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Bhumika Devi Temple",
+      "lat": 15.6543113,
+      "lon": 73.7204055,
+      "type": "node",
+      "osmId": "osm-10288743600",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "description=under renovation since at least 2019, last confirmed Dec 2022",
+        "name=Bhumika Devi Temple",
+        "religion=hindu"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Sri Dev Kolamb Maharingan Prasanna",
+      "lat": 15.6929211,
+      "lon": 73.7026052,
+      "type": "node",
+      "osmId": "osm-10765538007",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Sri Dev Kolamb Maharingan Prasanna",
+        "religion=hindu"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Big Banyan",
+      "lat": 15.7003765,
+      "lon": 73.715229,
+      "type": "node",
+      "osmId": "osm-10792556005",
+      "category": "attraction",
+      "tags": [
+        "denotation=natural_monument",
+        "genus=ficus benghalensis",
+        "name=Big Banyan",
+        "name:ru=Большое дерево Баньян",
+        "natural=tree",
+        "tourism=attraction"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Shiva shrine",
+      "lat": 15.6934228,
+      "lon": 73.6994803,
+      "type": "node",
+      "osmId": "osm-11578184869",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Shiva shrine"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Banyan Tree",
+      "lat": 15.7128799,
+      "lon": 73.7019031,
+      "type": "node",
+      "osmId": "osm-11581703669",
+      "category": "attraction",
+      "tags": [
+        "name=Banyan Tree",
+        "name:ru=Баньян",
+        "tourism=attraction"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Holy Cross Chapel",
+      "lat": 15.6809227,
+      "lon": 73.7060567,
+      "type": "node",
+      "osmId": "osm-11584761969",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Holy Cross Chapel",
+        "religion=christian"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Stone Temple",
+      "lat": 15.7044706,
+      "lon": 73.7103332,
+      "type": "node",
+      "osmId": "osm-11676292869",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Stone Temple",
+        "name:ru=Алтарь из камней",
+        "religion=hindu"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Tree Bodhi",
+      "lat": 15.7036532,
+      "lon": 73.7095442,
+      "type": "node",
+      "osmId": "osm-11676292870",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Tree Bodhi",
+        "name:ru=Дерево Баньян",
+        "religion=hindu"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "SunRiSet",
+      "lat": 15.7218726,
+      "lon": 73.6833431,
+      "type": "node",
+      "osmId": "osm-12550228901",
+      "category": "viewpoint",
+      "tags": [
+        "name=SunRiSet",
+        "tourism=viewpoint"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Altar",
+      "lat": 15.7031998,
+      "lon": 73.7034294,
+      "type": "node",
+      "osmId": "osm-13430532201",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Altar",
+        "name:ru=Алтарь"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Convent of Jesus & Mary",
+      "lat": 15.71589,
+      "lon": 73.702802,
+      "type": "node",
+      "osmId": "osm-13430562501",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Convent of Jesus & Mary",
+        "name:mr=कॉन्वेंट ऑफ़ जीसस & मैरी",
+        "name:ru=Монастырь Иисуса и Марии"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Shri Bhavani Devi Mandir",
+      "lat": 15.7431412,
+      "lon": 73.661039,
+      "type": "node",
+      "osmId": "osm-13469601108",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "name=Shri Bhavani Devi Mandir",
+        "religion=hindu"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Mahalaxmi Devi Mandrem",
+      "lat": 15.6651596,
+      "lon": 73.7143789,
+      "type": "node",
+      "osmId": "osm-13513783829",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "check_date=2026-02-01",
+        "denomination=hindu",
+        "description=मांद्रेकर कुटुंब देवी",
+        "name=Mahalaxmi Devi Mandrem",
+        "name:en=Mahalaxmi Devi Mandrem",
+        "name:mr=महालक्ष्मी देवी मांद्रेम",
+        "religion=hindu"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    },
+    {
+      "name": "Datta Temple",
+      "lat": 15.6653832,
+      "lon": 73.7145944,
+      "type": "node",
+      "osmId": "osm-13516219017",
+      "category": "place_of_worship",
+      "tags": [
+        "amenity=place_of_worship",
+        "check_date=2026-02-01",
+        "name=Datta Temple",
+        "name:en=Datta Temple",
+        "name:mr=दत्त मंदिर",
+        "religion=hindu"
+      ],
+      "parentCity": "Arambol",
+      "parentState": "Goa"
+    }
+  ]
+}
