@@ -6,6 +6,20 @@ import cors from 'cors';
 import { connectDB } from './lib/mongodb.js';
 import aiRoutes from './routes/ai.js';
 import authRoutes from './routes/auth.js';
+import toursRouter from './routes/tours.js';
+import rentalsRouter from './routes/rentals.js';
+import sightseeingRouter from './routes/sightseeing.js';
+import activitiesRouter from './routes/activities.js';
+import discoveryRouter from './routes/discovery.js';
+import usersRouter from './routes/users.js';
+import vendorRouter from './routes/vendor.js';
+import groupsRouter from './routes/groups.js';
+import blogsRouter from './routes/blogs.js';
+import adminRouter from './routes/admin.js';
+import pusherRouter from './routes/pusher.js';
+import searchRouter from './routes/search.js';
+import citiesRouter from './routes/cities.js';
+import miscRouter from './routes/misc.js';
 
 const app = express();
 const PORT = process.env.PORT || 5001;
@@ -39,6 +53,21 @@ app.use((req, res, next) => {
 // Routes
 app.use('/api/ai', aiRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/tours', toursRouter);
+app.use('/api/rentals', rentalsRouter);
+app.use('/api/sightseeing', sightseeingRouter);
+app.use('/api/activities', activitiesRouter);
+app.use('/api', discoveryRouter); // Handles attractions, food, stay, helplines
+app.use('/api/users', usersRouter);
+app.use('/api/vendor', vendorRouter);
+app.use('/api/blogs', blogsRouter);
+app.use('/api/groups', groupsRouter);
+app.use('/api/backpackers/group', groupsRouter); // Shared logic for backpacker paths
+app.use('/api/admin', adminRouter);
+app.use('/api/pusher', pusherRouter);
+app.use('/api/search', searchRouter);
+app.use('/api/cities', citiesRouter);
+app.use('/api', miscRouter); // Handles contact, team, push, waitlist, save, trips, home-cities
 
 // Root route
 app.get('/', (req, res) => {

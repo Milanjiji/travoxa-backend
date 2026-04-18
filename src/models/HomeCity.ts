@@ -27,7 +27,6 @@ const HomeCitySchema = new mongoose.Schema({
     }
 }, { timestamps: true });
 
-// Check if the model exists before creating a new one
 const HomeCity = mongoose.models.HomeCity || mongoose.model('HomeCity', HomeCitySchema);
 
 export default HomeCity;

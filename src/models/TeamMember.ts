@@ -23,7 +23,6 @@ const TeamMemberSchema = new Schema<ITeamMember>(
     { timestamps: true }
 );
 
-// Prevent model recompilation in Next.js development
 const TeamMember: Model<ITeamMember> =
     mongoose.models.TeamMember || mongoose.model<ITeamMember>("TeamMember", TeamMemberSchema);
 

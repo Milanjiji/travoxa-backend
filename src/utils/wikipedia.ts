@@ -18,7 +18,7 @@ export async function fetchPlaceDetails(name: string): Promise<WikipediaData> {
         // If exact match fails, search for the term
         const searchUrl = `https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=${searchTerm}&origin=*`;
         const searchRes = await fetch(searchUrl);
-        const searchData = await searchRes.json();
+        const searchData: any = await searchRes.json();
         
         if (searchData.query?.search?.length > 0) {
             const firstResult = searchData.query.search[0].title;
@@ -27,7 +27,7 @@ export async function fetchPlaceDetails(name: string): Promise<WikipediaData> {
         throw new Error('Wikipedia page not found');
     }
 
-    const data = await response.json();
+    const data: any = await response.json();
     
     return {
       summary: data.extract || '',
