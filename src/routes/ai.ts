@@ -23,9 +23,9 @@ function calculateDistance(lat1: number, lon1: number, lat2: number, lon2: numbe
 
 /**
  * Recommendations Endpoint
- * Ported from app/api/ai-recommendations/route.ts
+ * Supports both /api/ai-recommendations and /api/ai/recommendations
  */
-router.post('/recommendations', async (req, res) => {
+router.post(['/ai-recommendations', '/ai/recommendations'], async (req, res) => {
     try {
         const { primaryType, secondaryTypes, departure } = req.body;
         console.log(`[AI-Recommendation] Started for type: ${primaryType} near ${departure.lat}, ${departure.lon}`);
@@ -130,9 +130,9 @@ router.post('/recommendations', async (req, res) => {
 
 /**
  * Trip Planner Questionnaire Endpoint
- * Ported from app/api/ai-trip-planner/route.ts
+ * Supports both /api/ai-planner and /api/ai/planner
  */
-router.post('/planner', async (req, res) => {
+router.post(['/ai-planner', '/ai/planner'], async (req, res) => {
     try {
         const { messages, current_profile, current_phase } = req.body;
         const phase = current_phase || QuestionnairePhase.ORIGIN;

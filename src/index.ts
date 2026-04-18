@@ -66,18 +66,7 @@ app.use((req, res, next) => {
 });
 
 // Routes
-app.use('/api/ai', aiRoutes);
-
-// Compatibility Aliases for hyphenated legacy paths
-app.use('/api/ai-recommendations', (req, res, next) => {
-  req.url = '/recommendations';
-  next();
-}, aiRoutes);
-
-app.use('/api/ai-planner', (req, res, next) => {
-  req.url = '/planner';
-  next();
-}, aiRoutes);
+app.use('/api', aiRoutes); // Handles /ai-recommendations, /ai-planner, etc.
 app.use('/api/auth', authRoutes);
 app.use('/api/tours', toursRouter);
 app.use('/api/rentals', rentalsRouter);
