@@ -26,6 +26,8 @@ function calculateDistance(lat1: number, lon1: number, lat2: number, lon2: numbe
  * Ported from app/api/ai-recommendations/route.ts
  */
 router.post('/recommendations', async (req, res) => {
+    try {
+        const { primaryType, secondaryTypes, departure } = req.body;
         console.log(`[AI-Recommendation] Started for type: ${primaryType} near ${departure.lat}, ${departure.lon}`);
         if (!primaryType || !departure) {
             console.warn(`[AI-Recommendation] Missing fields: primaryType=${!!primaryType}, departure=${!!departure}`);
