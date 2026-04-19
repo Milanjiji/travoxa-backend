@@ -16,8 +16,9 @@ import { fetchPlaceDetails } from '../utils/wikipedia.js';
 import { scrapeMapsPlace } from '../utils/mapsScraper.js';
 import { authenticate, isAdmin } from '../middleware/auth.js';
 
-// --- Admin Root / Global ---
-// (No global middleware yet)
+const router = Router();
+
+// --- Admin Root / Global (Public) ---
 
 /**
  * @route   GET /api/admin/chat/unread-count
@@ -188,18 +189,6 @@ router.get('/chat/users', async (req, res) => {
     }
 });
 
-/**
- * @route   GET /api/admin/chat/unread-count
- */
-router.get('/chat/unread-count', async (req, res) => {
-    try {
-        await connectDB();
-        const count = await ChatMessage.countDocuments({ sender: 'user', isRead: false });
-        res.json({ success: true, count });
-    } catch (error: any) {
-        res.status(500).json({ success: false, error: error.message });
-    }
-});
 
 /**
  * @route   POST /api/admin/chat/read
