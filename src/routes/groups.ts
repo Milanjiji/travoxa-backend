@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import mongoose from 'mongoose';
 import BackpackerGroup from '../models/BackpackerGroup.js';
 import User from '../models/User.js';
 import { connectDB } from '../lib/mongodb.js';
@@ -115,9 +116,12 @@ router.post('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         await connectDB();
-        const authReq = req as AuthRequest;
         const { id } = req.params;
-        let group = await BackpackerGroup.findById(id);
+        
+        let group = null;
+        if (mongoose.isValidObjectId(id)) {
+            group = await BackpackerGroup.findById(id);
+        }
         if (!group) group = await BackpackerGroup.findOne({ id });
         if (!group) return res.status(404).json({ error: "Group not found" });
         res.json({ group });
@@ -135,12 +139,14 @@ router.patch('/:id', async (req, res) => {
         const { id } = req.params;
         await connectDB();
 
-        // Admin/Creator logic can be extended here
-        const updatedGroup = await BackpackerGroup.findByIdAndUpdate(
-            id,
-            { $set: body },
-            { new: true }
-        );
+        let updatedGroup = null;
+        if (mongoose.isValidObjectId(id)) {
+            updatedGroup = await BackpackerGroup.findByIdAndUpdate(
+                id,
+                { $set: body },
+                { new: true }
+            );
+        }
 
         if (!updatedGroup) {
             // Also try by string id
@@ -184,7 +190,11 @@ router.delete('/:id', async (req, res) => {
     try {
         await connectDB();
         const { id } = req.params;
-        const deletedGroup = await BackpackerGroup.findByIdAndDelete(id);
+        
+        let deletedGroup = null;
+        if (mongoose.isValidObjectId(id)) {
+            deletedGroup = await BackpackerGroup.findByIdAndDelete(id);
+        }
 
         if (!deletedGroup) {
             const deletedByString = await BackpackerGroup.findOneAndDelete({ id });
