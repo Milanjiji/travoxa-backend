@@ -3,9 +3,10 @@ import BackpackerGroup from '../models/BackpackerGroup.js';
 import User from '../models/User.js';
 import { connectDB } from '../lib/mongodb.js';
 import { getUser, getUserById, checkUserExists } from '../lib/mongodbUtils.js';
-import { authenticate, AuthRequest } from '../middleware/auth.js';
+import { identifyUser, AuthRequest } from '../middleware/auth.js';
 
 const router = Router();
+router.use(identifyUser);
 
 /**
  * Helper to create host profile
@@ -79,15 +80,7 @@ router.post('/', async (req, res) => {
         const payload = req.body;
         
         // Identify creator: Token or Body (creatorId/email) (Backcompat)
-        let creatorId = payload.creatorId || payload.email || payload.userId;
-        try {
-            const { authenticate } = await import('../middleware/auth.js');
-            const authReq = req as AuthRequest;
-            await new Promise((resolve) => authenticate(authReq, res as any, (err) => {
-                if (!err && authReq.user) creatorId = authReq.user.email;
-                resolve(null);
-            }));
-        } catch (e) {}
+        const creatorId = req.user?.email || payload.creatorId || payload.email || payload.userId;
 
         if (!creatorId) return res.status(401).json({ error: "Unauthorized: User email required" });
 

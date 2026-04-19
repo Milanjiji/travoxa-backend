@@ -38,6 +38,32 @@ export const authenticate = async (req: AuthRequest, res: Response, next: NextFu
 };
 
 /**
+ * Soft Authentication Middleware (Identification only)
+ * Populates req.user if a token is valid, but DOES NOT reject the request if missing.
+ */
+export const identifyUser = async (req: AuthRequest, res: Response, next: NextFunction) => {
+  const authHeader = req.headers.authorization;
+
+  if (!authHeader?.startsWith('Bearer ')) {
+    return next();
+  }
+
+  const token = authHeader.split('Bearer ')[1];
+
+  try {
+    const decodedToken = await admin.auth().verifyIdToken(token);
+    req.user = {
+      uid: decodedToken.uid,
+      email: decodedToken.email,
+      role: (decodedToken.role as string) || 'user',
+    };
+  } catch (error: any) {
+    console.warn('[Middleware/Auth] Optional Token verification failed:', error.message);
+  }
+  next();
+};
+
+/**
  * Optional Admin-only Middleware
  */
 export const isAdmin = (req: AuthRequest, res: Response, next: NextFunction) => {

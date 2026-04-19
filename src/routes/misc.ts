@@ -158,21 +158,16 @@ router.post('/circle-waitlist', async (req, res) => {
 });
 
 // --- Saved Items & Trips ---
+router.use(identifyUser);
+
 router.post('/save', async (req, res) => {
     try {
         await connectDB();
-        // Allow identification via Firebase token or direct email (backward compat)
-        let userId;
-        try {
-            const { authenticate } = await import('../middleware/auth.js');
-            const authReq = req as AuthRequest;
-            await new Promise((resolve) => authenticate(authReq, res as any, resolve));
-            userId = authReq.user?.email || req.body.email;
-        } catch (e) {
-            userId = req.body.email;
-        }
+        const { itemId, itemType, title, itemLink, email } = req.body;
+        
+        // Identity: Token or Body (email) (Backcompat)
+        let userId = (req as AuthRequest).user?.email || email;
 
-        const { itemId, itemType, title, itemLink } = req.body;
         if (!userId) return res.status(401).json({ success: false, error: 'Unauthorized: User identification required' });
         
         const existing = await SavedItem.findOne({ userId, itemId, itemType });
@@ -192,16 +187,7 @@ router.get('/save', async (req, res) => {
         await connectDB();
         const { itemId, itemType, email } = req.query;
         
-        // Attempt to get user from token, but fallback to email param for GET status checks
-        let userId = email as string;
-        if (!userId) {
-            try {
-                const { authenticate } = await import('../middleware/auth.js');
-                const authReq = req as AuthRequest;
-                await new Promise((resolve) => authenticate(authReq, res as any, resolve));
-                userId = authReq.user?.email || "";
-            } catch (e) {}
-        }
+        let userId = (req as AuthRequest).user?.email || (email as string);
 
         if (!userId) return res.status(401).json({ error: "Missing email identification" });
 
@@ -220,24 +206,6 @@ router.get('/trips', async (req, res) => {
     try {
         await connectDB();
         const { email } = req.query;
-        let userId = email as string;
-        
-        if (!userId) {
-            try {
-                const { authenticate } = await import('../middleware/auth.js');
-                const authReq = req as AuthRequest;
-                await new Promise((resolve) => authenticate(authReq, res as any, resolve));
-                userId = authReq.user?.email || "";
-            } catch (e) {}
-        }
-
-        if (!userId) return res.status(401).json({ error: "Missing email identification" });
-
-        const trips = await Trip.find({ userId }).sort({ createdAt: -1 });
-        res.json({ success: true, data: trips });
-    } catch (error: any) {
-        res.status(500).json({ error: error.message });
-    }
 });
 
 export default router;
