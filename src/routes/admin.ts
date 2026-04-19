@@ -16,9 +16,23 @@ import { fetchPlaceDetails } from '../utils/wikipedia.js';
 import { scrapeMapsPlace } from '../utils/mapsScraper.js';
 import { authenticate, isAdmin } from '../middleware/auth.js';
 
-const router = Router();
+// --- Admin Root / Global ---
+// (No global middleware yet)
 
-// Apply admin protection to all routes in this file
+/**
+ * @route   GET /api/admin/chat/unread-count
+ */
+router.get('/chat/unread-count', async (req, res) => {
+    try {
+        await connectDB();
+        const count = await ChatMessage.countDocuments({ sender: 'user', isRead: false });
+        res.json({ success: true, count });
+    } catch (error: any) {
+        res.status(500).json({ success: false, error: error.message });
+    }
+});
+
+// Protected Admin Routes follow:
 router.use(authenticate, isAdmin);
 
 /**

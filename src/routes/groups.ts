@@ -78,8 +78,8 @@ router.post('/', async (req, res) => {
         await connectDB();
         const payload = req.body;
         
-        // Identify creator: Token or Body Email (Backcompat)
-        let creatorId = payload.email || payload.userId;
+        // Identify creator: Token or Body (creatorId/email) (Backcompat)
+        let creatorId = payload.creatorId || payload.email || payload.userId;
         try {
             const { authenticate } = await import('../middleware/auth.js');
             const authReq = req as AuthRequest;
