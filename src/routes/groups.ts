@@ -45,6 +45,7 @@ async function createHostProfile(creatorId: string) {
 router.get('/', async (req, res) => {
     try {
         await connectDB();
+        const authReq = req as AuthRequest;
         const { admin, userId } = req.query;
         const showAll = admin === 'true';
 
@@ -77,10 +78,11 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     try {
         await connectDB();
+        const authReq = req as AuthRequest;
         const payload = req.body;
         
         // Identify creator: Token or Body (creatorId/email) (Backcompat)
-        const creatorId = req.user?.email || payload.creatorId || payload.email || payload.userId;
+        const creatorId = (req as AuthRequest).user?.email || payload.creatorId || payload.email || payload.userId;
 
         if (!creatorId) return res.status(401).json({ error: "Unauthorized: User email required" });
 
@@ -113,6 +115,7 @@ router.post('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         await connectDB();
+        const authReq = req as AuthRequest;
         const { id } = req.params;
         let group = await BackpackerGroup.findById(id);
         if (!group) group = await BackpackerGroup.findOne({ id });
@@ -129,17 +132,10 @@ router.get('/:id', async (req, res) => {
 router.post('/report', async (req, res) => {
     try {
         await connectDB();
+        const authReq = req as AuthRequest;
         const { groupId, reason, email } = req.body;
         
-        let reporterId = email;
-        try {
-            const { authenticate } = await import('../middleware/auth.js');
-            const authReq = req as AuthRequest;
-            await new Promise((resolve) => authenticate(authReq, res as any, (err) => {
-                if (!err && authReq.user) reporterId = authReq.user.email;
-                resolve(null);
-            }));
-        } catch (e) {}
+        const reporterId = (req as AuthRequest).user?.email || email;
 
         if (!reporterId) return res.status(401).json({ error: "Unauthorized" });
 
@@ -168,18 +164,11 @@ router.post('/report', async (req, res) => {
 router.post('/:id/join', async (req, res) => {
     try {
         await connectDB();
+        const authReq = req as AuthRequest;
         const { id } = req.params;
         const { note, email } = req.body;
         
-        let mongoUserId = email;
-        try {
-            const { authenticate } = await import('../middleware/auth.js');
-            const authReq = req as AuthRequest;
-            await new Promise((resolve) => authenticate(authReq, res as any, (err) => {
-                if (!err && authReq.user) mongoUserId = authReq.user.email;
-                resolve(null);
-            }));
-        } catch (e) {}
+        const mongoUserId = (req as AuthRequest).user?.email || email;
 
         if (!mongoUserId) return res.status(401).json({ error: "Unauthorized" });
 
@@ -206,18 +195,11 @@ router.post('/:id/join', async (req, res) => {
 router.post('/:id/requests/:requestId/approve', async (req, res) => {
     try {
         await connectDB();
+        const authReq = req as AuthRequest;
         const { id, requestId } = req.params;
         const { email } = req.body;
         
-        let approverId = email;
-        try {
-            const { authenticate } = await import('../middleware/auth.js');
-            const authReq = req as AuthRequest;
-            await new Promise((resolve) => authenticate(authReq, res as any, (err) => {
-                if (!err && authReq.user) approverId = authReq.user.email;
-                resolve(null);
-            }));
-        } catch (e) {}
+        const approverId = (req as AuthRequest).user?.email || email;
 
         if (!approverId) return res.status(401).json({ error: "Unauthorized" });
 
@@ -258,18 +240,11 @@ router.post('/:id/requests/:requestId/approve', async (req, res) => {
 router.post('/:id/comments', async (req, res) => {
     try {
         await connectDB();
+        const authReq = req as AuthRequest;
         const { text, email } = req.body;
         const { id } = req.params;
         
-        let authorId = email;
-        try {
-            const { authenticate } = await import('../middleware/auth.js');
-            const authReq = req as AuthRequest;
-            await new Promise((resolve) => authenticate(authReq, res as any, (err) => {
-                if (!err && authReq.user) authorId = authReq.user.email;
-                resolve(null);
-            }));
-        } catch (e) {}
+        const authorId = (req as AuthRequest).user?.email || email;
 
         if (!authorId) return res.status(401).json({ error: "Unauthorized" });
 

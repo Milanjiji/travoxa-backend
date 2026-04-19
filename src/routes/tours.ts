@@ -1,9 +1,10 @@
 import { Router } from 'express';
 import Tour from '../models/Tour.js';
 import TourRequest from '../models/TourRequest.js';
+import CustomTourRequest from '../models/CustomTourRequest.js';
 import User from '../models/User.js';
 import { connectDB } from '../lib/mongodb.js';
-import { authenticate, isAdmin } from '../middleware/auth.js';
+import { authenticate, isAdmin, identifyUser, AuthRequest } from '../middleware/auth.js';
 
 const router = Router();
 
@@ -58,16 +59,17 @@ router.get('/', async (req, res) => {
  * @route   GET /api/tours/request
  * @desc    Get tour requests (Admin: all, User: own)
  */
-router.get('/request', authenticate, async (req: any, res) => {
+router.get('/request', identifyUser, async (req: AuthRequest, res) => {
     try {
         await connectDB();
-        const user = await User.findOne({ email: req.user.email });
+        const authReq = req;
+        const user = await User.findOne({ email: authReq.user?.email || (req.query.email as string) });
         if (!user) return res.status(404).json({ error: 'User not found' });
 
         const { tourId, admin } = req.query;
         let query: any = {};
 
-        if (admin === 'true' && req.user.role === 'admin') {
+        if (admin === 'true' && authReq.user?.role === 'admin') {
             if (tourId) query.tourId = tourId;
         } else if (tourId) {
             query.tourId = tourId;
@@ -143,10 +145,11 @@ router.post('/', authenticate, async (req, res) => {
 /**
  * @route   POST /api/tours/request
  */
-router.post('/request', authenticate, async (req: any, res) => {
+router.post('/request', identifyUser, async (req: AuthRequest, res) => {
     try {
         await connectDB();
-        const user = await User.findOne({ email: req.user.email });
+        const authReq = req;
+        const user = await User.findOne({ email: authReq.user?.email || req.body.email });
         if (!user) return res.status(404).json({ error: 'User not found' });
 
         const { tourId, members, date, userDetails, priceReductionNotes } = req.body;
@@ -212,6 +215,100 @@ router.delete('/:id', authenticate, isAdmin, async (req, res) => {
         res.json({ success: true, message: 'Deleted and users notified.' });
     } catch (error: any) {
         res.status(500).json({ success: false, error: error.message });
+    }
+});
+
+/**
+ * @route   POST /api/tours/custom-request
+ * @desc    Submit a custom tour request
+ */
+router.post('/custom-request', authenticate, async (req: AuthRequest, res) => {
+    try {
+        await connectDB();
+        const body = req.body;
+        const {
+            destination, duration, groupSize, adults, children, infants,
+            tripType, budget, startDate, departurePlace, pickupLocation, dropLocation,
+            accommodationPreference, mealPlan, interests, additionalNotes, userDetails,
+        } = body;
+
+        if (!destination || !duration || !groupSize || !tripType || !budget || !departurePlace) {
+            return res.status(400).json({ message: 'Missing required fields.' });
+        }
+        if (!userDetails?.name || !userDetails?.email || !userDetails?.phone) {
+            return res.status(400).json({ message: 'Contact details (name, email, phone) are required.' });
+        }
+
+        const dbUser = await User.findOne({ email: req.user!.email });
+        if (!dbUser) return res.status(404).json({ message: 'User profile not found.' });
+
+        const newRequest = await CustomTourRequest.create({
+            userId: dbUser._id,
+            destination, duration, groupSize, adults, children, infants,
+            tripType, budget, startDate, departurePlace, pickupLocation, dropLocation,
+            accommodationPreference, mealPlan, interests, additionalNotes,
+            userDetails: { name: userDetails.name, email: userDetails.email, phone: userDetails.phone },
+            status: 'pending',
+        });
+
+        res.status(201).json({ message: 'Request submitted successfully!', requestId: newRequest._id });
+    } catch (error: any) {
+        res.status(500).json({ message: 'Internal Server Error', error: error.message });
+    }
+});
+
+/**
+ * @route   GET /api/tours/custom-request
+ * @desc    Get custom tour requests (admin: all, user: own)
+ */
+router.get('/custom-request', authenticate, async (req: AuthRequest, res) => {
+    try {
+        await connectDB();
+        const { userId } = req.query;
+        const query: any = userId ? { userId } : {};
+
+        const requests = await CustomTourRequest.find(query)
+            .populate('userId', 'name email phone')
+            .sort({ createdAt: -1 });
+
+        res.json({ success: true, data: requests });
+    } catch (error: any) {
+        res.status(500).json({ message: 'Internal Server Error', error: error.message });
+    }
+});
+
+/**
+ * @route   PUT /api/tours/custom-request
+ * @desc    Update custom tour request status (admin)
+ */
+router.put('/custom-request', authenticate, async (req: AuthRequest, res) => {
+    try {
+        await connectDB();
+        const { requestId, status, adminResponse } = req.body;
+
+        if (!requestId || !status) return res.status(400).json({ message: 'Missing required fields' });
+
+        const validStatuses = ['approved', 'rejected', 'reviewed', 'contacted', 'closed'];
+        if (!validStatuses.includes(status)) return res.status(400).json({ message: 'Invalid status' });
+
+        const updateData: any = { status };
+        if (adminResponse && status === 'approved') updateData.adminResponse = adminResponse;
+
+        const updatedRequest = await CustomTourRequest.findByIdAndUpdate(requestId, updateData, { new: true });
+        if (!updatedRequest) return res.status(404).json({ message: 'Request not found' });
+
+        let message = `Your custom trip request to ${updatedRequest.destination} has been ${status}.`;
+        if (status === 'approved' && adminResponse) {
+            message += ` Total: ₹${adminResponse.totalAmount?.toLocaleString()}, Booking: ₹${adminResponse.bookingAmount?.toLocaleString()}. Check your dashboard for details.`;
+        }
+
+        await User.findByIdAndUpdate(updatedRequest.userId, {
+            $push: { notifications: { senderId: 'admin', message, seen: false, createdAt: new Date() } }
+        });
+
+        res.json({ success: true, data: updatedRequest });
+    } catch (error: any) {
+        res.status(500).json({ message: 'Internal Server Error', error: error.message });
     }
 });
 

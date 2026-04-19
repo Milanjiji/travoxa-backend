@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { connectDB } from '../lib/mongodb.js';
-import { authenticate, AuthRequest } from '../middleware/auth.js';
+import { authenticate, identifyUser, AuthRequest } from '../middleware/auth.js';
 import SupportTicket from '../models/SupportTicket.js';
 import HomeCity from '../models/HomeCity.js';
 import TeamMember from '../models/TeamMember.js';
@@ -9,6 +9,7 @@ import PushSubscription from '../models/PushSubscription.js';
 import CircleWaitlist from '../models/CircleWaitlist.js';
 import SavedItem from '../models/SavedItem.js';
 import Trip from '../models/Trip.js';
+import MobileActivity from '../models/MobileActivity.js';
 import { generateAIResponse } from '../lib/ai-service.js';
 import { fetchPlaceDetails } from '../utils/wikipedia.js';
 import AIConfig from '../models/AIConfig.js';
@@ -145,6 +146,41 @@ router.post('/mobile-push/register', async (req, res) => {
     }
 });
 
+// --- Mobile Activity ---
+router.post('/mobile-activity', async (req, res) => {
+    try {
+        await connectDB();
+        const activity = await MobileActivity.create(req.body);
+        res.status(201).json({ success: true, data: activity });
+    } catch (error: any) {
+        res.status(400).json({ success: false, message: error.message });
+    }
+});
+
+router.get('/mobile-activity', async (req, res) => {
+    try {
+        await connectDB();
+        const limit = parseInt(req.query.limit as string || '50');
+        const skip = parseInt(req.query.skip as string || '0');
+        const type = req.query.type as string;
+        const userEmail = req.query.userEmail as string;
+        
+        let query: any = {};
+        if (type) query.type = type;
+        if (userEmail) query.userEmail = { $regex: userEmail, $options: 'i' };
+        
+        const activities = await MobileActivity.find(query)
+            .sort({ createdAt: -1 })
+            .skip(skip)
+            .limit(limit);
+            
+        const total = await MobileActivity.countDocuments(query);
+        res.json({ success: true, data: activities, total });
+    } catch (error: any) {
+        res.status(500).json({ success: false, message: error.message });
+    }
+});
+
 router.post('/circle-waitlist', async (req, res) => {
     try {
         await connectDB();
@@ -205,7 +241,15 @@ router.get('/save', async (req, res) => {
 router.get('/trips', async (req, res) => {
     try {
         await connectDB();
-        const { email } = req.query;
+        const email = (req as AuthRequest).user?.email || (req.query.email as string);
+
+        if (!email) return res.status(401).json({ error: "Missing email identification" });
+
+        const trips = await Trip.find({ userId: email }).sort({ createdAt: -1 });
+        res.json({ success: true, data: trips });
+    } catch (error: any) {
+        res.status(500).json({ error: error.message });
+    }
 });
 
 export default router;

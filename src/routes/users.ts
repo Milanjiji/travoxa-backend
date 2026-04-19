@@ -32,15 +32,20 @@ router.get('/', async (req, res) => {
     const userId = dbUser._id.toString();
 
     // Dashboard Data
+    // NOTE: creatorId and members.id are stored as email strings (see groups.ts creation logic)
     const allUserGroups = await BackpackerGroup.find({
-      $or: [{ creatorId: userId }, { creatorId: email }, { "members.id": userId }, { "requests": { $elemMatch: { userId: userId, status: "pending" } } }]
+      $or: [
+        { creatorId: email },
+        { "members.id": email },
+        { "requests": { $elemMatch: { userId: email, status: "pending" } } }
+      ]
     }).sort({ createdAt: -1 }).lean();
 
     const formattedGroups = allUserGroups.map((group: any) => {
       let status = 'member';
-      const isCreator = group.creatorId === userId || group.creatorId === email;
-      const isMember = group.members.some((m: any) => m.id === userId);
-      const hasPendingRequest = group.requests?.some((r: any) => r.userId === userId && r.status === 'pending');
+      const isCreator = group.creatorId === email;
+      const isMember = group.members.some((m: any) => m.id === email);
+      const hasPendingRequest = group.requests?.some((r: any) => r.userId === email && r.status === 'pending');
       if (isCreator) status = 'created';
       else if (isMember) status = 'joined';
       else if (hasPendingRequest) status = 'requested';
@@ -105,11 +110,12 @@ router.post('/', async (req, res) => {
  */
 router.post('/edit', authenticate, async (req: AuthRequest, res) => {
   try {
+    const authReq = req as AuthRequest;
     const body = req.body;
     if (!body.email || !body.name || !body.gender || !body.city) return res.status(400).json({ error: "Missing required fields" });
     
     // Security check: ensure they are editing their own profile or are admin
-    if (req.user!.email !== body.email && req.user!.role !== 'admin') {
+    if (authReq.user!.email !== body.email && authReq.user!.role !== 'admin') {
       return res.status(403).json({ error: "Forbidden: You can only edit your own profile" });
     }
 
@@ -129,7 +135,8 @@ router.post('/edit', authenticate, async (req: AuthRequest, res) => {
 router.post('/notifications/mark-seen', authenticate, async (req: AuthRequest, res) => {
   try {
     await connectDB();
-    await User.updateOne({ email: req.user!.email }, { $set: { "notifications.$[].seen": true } });
+    const authReq = req as AuthRequest;
+    await User.updateOne({ email: authReq.user!.email }, { $set: { "notifications.$[].seen": true } });
     res.json({ success: true, message: 'Notifications marked as seen' });
   } catch (error) {
     res.status(500).json({ error: 'Internal Server Error' });
@@ -145,7 +152,8 @@ router.post('/block', authenticate, async (req: AuthRequest, res) => {
     if (!targetUserId) return res.status(400).json({ error: "Missing targetUserId" });
     
     await connectDB();
-    const user = await User.findOne({ email: req.user!.email });
+    const authReq = req as AuthRequest;
+    const user = await User.findOne({ email: authReq.user!.email });
     if (!user) return res.status(404).json({ error: "User not found" });
 
     if (!user.blockedUserIds) user.blockedUserIds = [];
@@ -178,7 +186,8 @@ router.get('/check', async (req, res) => {
  */
 router.delete('/', authenticate, async (req: AuthRequest, res) => {
   try {
-    const email = req.user!.email;
+    const authReq = req as AuthRequest;
+    const email = authReq.user!.email;
     await connectDB();
     const dbUser = await User.findOne({ email });
     if (!dbUser) return res.status(404).json({ error: "User not found" });

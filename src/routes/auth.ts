@@ -19,7 +19,7 @@ router.post('/login', async (req, res) => {
   }
 
   try {
-    const FIREBASE_AUTH_URL = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${process.env.NEXT_PUBLIC_FIREBASE_API_KEY}`;
+    const FIREBASE_AUTH_URL = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${process.env.FIREBASE_API_KEY}`;
 
     const response = await fetch(FIREBASE_AUTH_URL, {
       method: 'POST',

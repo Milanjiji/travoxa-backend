@@ -3,7 +3,7 @@ import * as admin from 'firebase-admin';
 // Protect against multiple initializations
 if (!admin.apps.length) {
     try {
-        const projectId = process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || process.env.FIREBASE_PROJECT_ID;
+        const projectId = process.env.FIREBASE_PROJECT_ID;
         const clientEmail = process.env.FIREBASE_CLIENT_EMAIL;
         const privateKey = process.env.FIREBASE_PRIVATE_KEY;
 
@@ -23,7 +23,7 @@ if (!admin.apps.length) {
                 clientEmail: !!clientEmail,
                 privateKey: !!privateKey
             });
-            console.warn('Ensure FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, and FIREBASE_PRIVATE_KEY are set in Vercel.');
+            console.warn('Ensure FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, and FIREBASE_PRIVATE_KEY are set in your environment variables / Render settings.');
         }
     } catch (error) {
         console.error('Firebase Admin initialization error', error);

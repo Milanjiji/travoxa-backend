@@ -75,6 +75,7 @@ app.use('/api/activities', activitiesRouter);
 app.use('/api', discoveryRouter); // Handles attractions, food, stay, helplines
 app.use('/api/users', usersRouter);
 app.use('/api/vendor', vendorRouter);
+app.use('/api/users', vendorRouter); // Alias — web project uses /api/users/edit-vendor
 app.use('/api/blogs', blogsRouter);
 app.use('/api/groups', groupsRouter);
 app.use('/api/backpackers/group', groupsRouter); // Shared logic for backpacker paths
