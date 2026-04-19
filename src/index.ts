@@ -20,6 +20,7 @@ import pusherRouter from './routes/pusher.js';
 import searchRouter from './routes/search.js';
 import citiesRouter from './routes/cities.js';
 import miscRouter from './routes/misc.js';
+import travelJournalsRouter from './routes/travelJournals.js';
 
 const app = express();
 const PORT = process.env.PORT || 5001;
@@ -84,6 +85,7 @@ app.use('/api/pusher', pusherRouter);
 app.use('/api/search', searchRouter);
 app.use('/api/cities', citiesRouter);
 app.use('/api', miscRouter); // Handles contact, team, push, waitlist, save, trips, home-cities
+app.use('/api/travel-journals', travelJournalsRouter);
 
 // Root route
 app.get('/', (req, res) => {
