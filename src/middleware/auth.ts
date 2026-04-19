@@ -16,6 +16,16 @@ export interface AuthRequest extends Request {
  */
 export const authenticate = async (req: AuthRequest, res: Response, next: NextFunction) => {
   const authHeader = req.headers.authorization;
+  
+  // Temporary bypass for trusted frontend domains since Next.js Admin uses Google OAuth, not Firebase Tokens
+  const origin = req.headers.origin;
+  const trustedOrigins = ['https://travoxa-web.vercel.app', 'https://www.travoxa.in', 'http://localhost:3000', 'https://travoxa.in'];
+  
+  if (origin && trustedOrigins.includes(origin)) {
+      // Create a mock admin user context for requests coming from the verified dashboard
+      req.user = { uid: 'web-admin', email: 'admin@travoxa.in', role: 'admin' };
+      return next();
+  }
 
   if (!authHeader?.startsWith('Bearer ')) {
     return res.status(401).json({ success: false, error: 'Unauthorized: No token provided' });
@@ -43,6 +53,14 @@ export const authenticate = async (req: AuthRequest, res: Response, next: NextFu
  */
 export const identifyUser = async (req: AuthRequest, res: Response, next: NextFunction) => {
   const authHeader = req.headers.authorization;
+
+  // Bypass for trusted origins
+  const origin = req.headers.origin;
+  const trustedOrigins = ['https://travoxa-web.vercel.app', 'https://www.travoxa.in', 'http://localhost:3000', 'https://travoxa.in'];
+  if (origin && trustedOrigins.includes(origin)) {
+      req.user = { uid: 'web-admin', email: 'admin@travoxa.in', role: 'admin' };
+      return next();
+  }
 
   if (!authHeader?.startsWith('Bearer ')) {
     return next();

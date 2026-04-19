@@ -127,6 +127,78 @@ router.get('/:id', async (req, res) => {
 });
 
 /**
+ * @route   PATCH /api/groups/:id
+ */
+router.patch('/:id', async (req, res) => {
+    try {
+        const body = req.body;
+        const { id } = req.params;
+        await connectDB();
+
+        // Admin/Creator logic can be extended here
+        const updatedGroup = await BackpackerGroup.findByIdAndUpdate(
+            id,
+            { $set: body },
+            { new: true }
+        );
+
+        if (!updatedGroup) {
+            // Also try by string id
+            const updatedByString = await BackpackerGroup.findOneAndUpdate(
+                { id },
+                { $set: body },
+                { new: true }
+            );
+            if (!updatedByString) return res.status(404).json({ error: "Group not found" });
+            
+            if (body.verified === true) {
+                try {
+                    await User.findOneAndUpdate(
+                        { email: updatedByString.creatorId },
+                        { $push: { notifications: { senderId: "system", message: `Your crew "${updatedByString.groupName}" has been verified and published!`, seen: false, createdAt: new Date() } } }
+                    );
+                } catch (e) {}
+            }
+            return res.json({ group: updatedByString, message: "Group updated successfully" });
+        }
+
+        if (body.verified === true) {
+            try {
+                await User.findOneAndUpdate(
+                    { email: updatedGroup.creatorId },
+                    { $push: { notifications: { senderId: "system", message: `Your crew "${updatedGroup.groupName}" has been verified and published!`, seen: false, createdAt: new Date() } } }
+                );
+            } catch (e) {}
+        }
+
+        res.json({ group: updatedGroup, message: "Group updated successfully" });
+    } catch (error) {
+        res.status(500).json({ error: "Server error" });
+    }
+});
+
+/**
+ * @route   DELETE /api/groups/:id
+ */
+router.delete('/:id', async (req, res) => {
+    try {
+        await connectDB();
+        const { id } = req.params;
+        const deletedGroup = await BackpackerGroup.findByIdAndDelete(id);
+
+        if (!deletedGroup) {
+            const deletedByString = await BackpackerGroup.findOneAndDelete({ id });
+            if (!deletedByString) return res.status(404).json({ error: "Group not found" });
+            return res.json({ message: "Group deleted successfully" });
+        }
+
+        res.json({ message: "Group deleted successfully" });
+    } catch (error) {
+        res.status(500).json({ error: "Server error" });
+    }
+});
+
+/**
  * @route   POST /api/groups/report
  */
 router.post('/report', async (req, res) => {
