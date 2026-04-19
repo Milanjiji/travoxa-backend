@@ -73,11 +73,23 @@ router.get('/', async (req, res) => {
 /**
  * @route   POST /api/groups
  */
-router.post('/', authenticate, async (req: AuthRequest, res) => {
+router.post('/', async (req, res) => {
     try {
         await connectDB();
         const payload = req.body;
-        const creatorId = req.user!.email!;
+        
+        // Identify creator: Token or Body Email (Backcompat)
+        let creatorId = payload.email || payload.userId;
+        try {
+            const { authenticate } = await import('../middleware/auth.js');
+            const authReq = req as AuthRequest;
+            await new Promise((resolve) => authenticate(authReq, res as any, (err) => {
+                if (!err && authReq.user) creatorId = authReq.user.email;
+                resolve(null);
+            }));
+        } catch (e) {}
+
+        if (!creatorId) return res.status(401).json({ error: "Unauthorized: User email required" });
 
         const start = new Date(payload.startDate);
         const end = new Date(payload.endDate);
@@ -121,11 +133,23 @@ router.get('/:id', async (req, res) => {
 /**
  * @route   POST /api/groups/report
  */
-router.post('/report', authenticate, async (req: AuthRequest, res) => {
+router.post('/report', async (req, res) => {
     try {
-        const { groupId, reason } = req.body;
-        const reporterId = req.user!.email!;
         await connectDB();
+        const { groupId, reason, email } = req.body;
+        
+        let reporterId = email;
+        try {
+            const { authenticate } = await import('../middleware/auth.js');
+            const authReq = req as AuthRequest;
+            await new Promise((resolve) => authenticate(authReq, res as any, (err) => {
+                if (!err && authReq.user) reporterId = authReq.user.email;
+                resolve(null);
+            }));
+        } catch (e) {}
+
+        if (!reporterId) return res.status(401).json({ error: "Unauthorized" });
+
         let group = await BackpackerGroup.findById(groupId);
         if (!group) group = await BackpackerGroup.findOne({ id: groupId });
         if (!group) return res.status(404).json({ error: "Group not found" });
@@ -148,12 +172,23 @@ router.post('/report', authenticate, async (req: AuthRequest, res) => {
 /**
  * @route   POST /api/backpackers/group/:id/join
  */
-router.post('/:id/join', authenticate, async (req: AuthRequest, res) => {
+router.post('/:id/join', async (req, res) => {
     try {
         await connectDB();
         const { id } = req.params;
-        const { note } = req.body;
-        const mongoUserId = req.user!.email!; // Simplified for backend
+        const { note, email } = req.body;
+        
+        let mongoUserId = email;
+        try {
+            const { authenticate } = await import('../middleware/auth.js');
+            const authReq = req as AuthRequest;
+            await new Promise((resolve) => authenticate(authReq, res as any, (err) => {
+                if (!err && authReq.user) mongoUserId = authReq.user.email;
+                resolve(null);
+            }));
+        } catch (e) {}
+
+        if (!mongoUserId) return res.status(401).json({ error: "Unauthorized" });
 
         let group = await BackpackerGroup.findById(id);
         if (!group) group = await BackpackerGroup.findOne({ id });
@@ -175,17 +210,31 @@ router.post('/:id/join', authenticate, async (req: AuthRequest, res) => {
 /**
  * @route   POST /api/backpackers/group/:id/requests/:requestId/approve
  */
-router.post('/:id/requests/:requestId/approve', authenticate, async (req: AuthRequest, res) => {
+router.post('/:id/requests/:requestId/approve', async (req, res) => {
     try {
         await connectDB();
         const { id, requestId } = req.params;
+        const { email } = req.body;
+        
+        let approverId = email;
+        try {
+            const { authenticate } = await import('../middleware/auth.js');
+            const authReq = req as AuthRequest;
+            await new Promise((resolve) => authenticate(authReq, res as any, (err) => {
+                if (!err && authReq.user) approverId = authReq.user.email;
+                resolve(null);
+            }));
+        } catch (e) {}
+
+        if (!approverId) return res.status(401).json({ error: "Unauthorized" });
+
         let group = await BackpackerGroup.findById(id);
         if (!group) group = await BackpackerGroup.findOne({ id });
         if (!group) return res.status(404).json({ error: "Group not found" });
 
         // Auth check: Host only
-        const isHost = group.members.some((m: any) => m.id === req.user!.email && (m.role === "host" || m.role === "co-host"));
-        if (!isHost && group.creatorId !== req.user!.email) return res.status(403).json({ error: "Unauthorized" });
+        const isHost = group.members.some((m: any) => m.id === approverId && (m.role === "host" || m.role === "co-host"));
+        if (!isHost && group.creatorId !== approverId) return res.status(403).json({ error: "Unauthorized" });
 
         const joinRequest = group.requests.id(requestId);
         if (!joinRequest || joinRequest.status !== "pending") return res.status(400).json({ error: "Invalid request" });
@@ -201,7 +250,7 @@ router.post('/:id/requests/:requestId/approve', authenticate, async (req: AuthRe
 
         // Notification
         if (memberUser) {
-            await User.updateOne({ email: joinRequest.userId }, { $push: { notifications: { senderId: req.user!.email, message: `Approved for "${group.groupName}"!`, seen: false, createdAt: new Date() } } });
+            await User.updateOne({ email: joinRequest.userId }, { $push: { notifications: { senderId: approverId, message: `Approved for "${group.groupName}"!`, seen: false, createdAt: new Date() } } });
         }
 
         res.json({ message: "Approved", member: newMember });
@@ -213,20 +262,33 @@ router.post('/:id/requests/:requestId/approve', authenticate, async (req: AuthRe
 /**
  * @route   POST /api/groups/:id/comments
  */
-router.post('/:id/comments', authenticate, async (req: AuthRequest, res) => {
+router.post('/:id/comments', async (req, res) => {
     try {
         await connectDB();
-        const { text } = req.body;
+        const { text, email } = req.body;
         const { id } = req.params;
+        
+        let authorId = email;
+        try {
+            const { authenticate } = await import('../middleware/auth.js');
+            const authReq = req as AuthRequest;
+            await new Promise((resolve) => authenticate(authReq, res as any, (err) => {
+                if (!err && authReq.user) authorId = authReq.user.email;
+                resolve(null);
+            }));
+        } catch (e) {}
+
+        if (!authorId) return res.status(401).json({ error: "Unauthorized" });
+
         let group = await BackpackerGroup.findById(id);
         if (!group) group = await BackpackerGroup.findOne({ id });
         if (!group) return res.status(404).json({ error: "Group not found" });
 
-        const isHost = group.creatorId === req.user!.email;
+        const isHost = group.creatorId === authorId;
         const newComment = {
             id: `cmt_${Date.now().toString(36)}`,
-            authorId: req.user!.email,
-            authorName: req.user!.email?.split('@')[0],
+            authorId: authorId,
+            authorName: authorId.split('@')[0],
             avatarColor: isHost ? "#f59e0b" : "#34d399",
             text: text.trim(),
             createdAt: new Date(),
