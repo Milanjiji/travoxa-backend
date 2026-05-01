@@ -1,14 +1,14 @@
 import { Router, Response } from 'express';
 import { connectDB } from '../lib/mongodb.js';
 import { authenticate, identifyUser, AuthRequest } from '../middleware/auth.js';
-import TravelJournal from '../models/TravelJournal.js';
+import Story from '../models/Story.js';
 import { fetchIGMetadata } from '../utils/igUtils.js';
 
 const router = Router();
 
 /**
- * @route GET /api/travel-journals
- * @desc Fetch all public published journals
+ * @route GET /api/stories
+ * @desc Fetch all public published stories
  */
 router.get('/', identifyUser, async (req: AuthRequest, res: Response) => {
     try {
@@ -16,22 +16,22 @@ router.get('/', identifyUser, async (req: AuthRequest, res: Response) => {
         const limit = parseInt(req.query.limit as string) || 20;
         const skip = parseInt(req.query.skip as string) || 0;
 
-        const journals = await TravelJournal.find({ isPublic: true, status: 'published' })
+        const stories = await Story.find({ isPublic: true, status: 'published' })
             .sort({ createdAt: -1 })
             .skip(skip)
             .limit(limit);
 
-        const total = await TravelJournal.countDocuments({ isPublic: true, status: 'published' });
+        const total = await Story.countDocuments({ isPublic: true, status: 'published' });
 
-        res.json({ success: true, data: journals, total });
+        res.json({ success: true, data: stories, total });
     } catch (error: any) {
         res.status(500).json({ success: false, error: error.message });
     }
 });
 
 /**
- * @route GET /api/travel-journals/user/:email
- * @desc Fetch journals by a specific user (drafts included if requester is owner)
+ * @route GET /api/stories/user/:email
+ * @desc Fetch stories by a specific user (drafts included if requester is owner)
  */
 router.get('/user/:email', identifyUser, async (req: AuthRequest, res: Response) => {
     try {
@@ -47,40 +47,40 @@ router.get('/user/:email', identifyUser, async (req: AuthRequest, res: Response)
             query.isPublic = true;
         }
 
-        const journals = await TravelJournal.find(query).sort({ createdAt: -1 });
-        res.json({ success: true, data: journals });
+        const stories = await Story.find(query).sort({ createdAt: -1 });
+        res.json({ success: true, data: stories });
     } catch (error: any) {
         res.status(500).json({ success: false, error: error.message });
     }
 });
 
 /**
- * @route GET /api/travel-journals/:id
- * @desc Fetch a specific journal
+ * @route GET /api/stories/:id
+ * @desc Fetch a specific story
  */
 router.get('/:id', identifyUser, async (req: AuthRequest, res: Response) => {
     try {
         await connectDB();
-        const journal = await TravelJournal.findById(req.params.id);
-        if (!journal) return res.status(404).json({ success: false, error: 'Journal not found' });
+        const story = await Story.findById(req.params.id);
+        if (!story) return res.status(404).json({ success: false, error: 'Story not found' });
 
         // Privacy check
-        if (journal.status === 'draft' || !journal.isPublic) {
+        if (story.status === 'draft' || !story.isPublic) {
             const requesterEmail = req.user?.email;
-            if (requesterEmail !== journal.author.email && req.user?.role !== 'admin') {
-                return res.status(403).json({ success: false, error: 'Unauthorized to view this journal' });
+            if (requesterEmail !== story.author.email && req.user?.role !== 'admin') {
+                return res.status(403).json({ success: false, error: 'Unauthorized to view this story' });
             }
         }
 
-        res.json({ success: true, data: journal });
+        res.json({ success: true, data: story });
     } catch (error: any) {
         res.status(500).json({ success: false, error: error.message });
     }
 });
 
 /**
- * @route POST /api/travel-journals
- * @desc Create or update a journal
+ * @route POST /api/stories
+ * @desc Create or update a story
  */
 router.post('/', authenticate, async (req: AuthRequest, res: Response) => {
     try {
@@ -113,18 +113,18 @@ router.post('/', authenticate, async (req: AuthRequest, res: Response) => {
             }
         }
 
-        let journal;
+        let story;
         if (_id) {
             // Update existing
-            const existing = await TravelJournal.findById(_id);
-            if (!existing) return res.status(404).json({ success: false, error: 'Journal not found' });
+            const existing = await Story.findById(_id);
+            if (!existing) return res.status(404).json({ success: false, error: 'Story not found' });
 
             // Check ownership
             if (existing.author.email !== user.email && user.role !== 'admin') {
-                return res.status(403).json({ success: false, error: 'Unauthorized to update this journal' });
+                return res.status(403).json({ success: false, error: 'Unauthorized to update this story' });
             }
 
-            journal = await TravelJournal.findByIdAndUpdate(_id, data, { new: true });
+            story = await Story.findByIdAndUpdate(_id, data, { new: true });
         } else {
             // Create new
             // Ensure author matches authenticated user
@@ -133,17 +133,17 @@ router.post('/', authenticate, async (req: AuthRequest, res: Response) => {
                 name: data.author?.name || user.email?.split('@')[0] || 'Traveler',
                 image: data.author?.image || ''
             };
-            journal = await TravelJournal.create(data);
+            story = await Story.create(data);
         }
 
-        res.status(201).json({ success: true, data: journal });
+        res.status(201).json({ success: true, data: story });
     } catch (error: any) {
         res.status(500).json({ success: false, error: error.message });
     }
 });
 
 /**
- * @route POST /api/travel-journals/:id/like
+ * @route POST /api/stories/:id/like
  * @desc Toggle like
  */
 router.post('/:id/like', authenticate, async (req: AuthRequest, res: Response) => {
@@ -152,42 +152,43 @@ router.post('/:id/like', authenticate, async (req: AuthRequest, res: Response) =
         const userEmail = req.user?.email;
         if (!userEmail) return res.status(401).json({ success: false, error: 'Unauthorized' });
 
-        const journal = await TravelJournal.findById(req.params.id);
-        if (!journal) return res.status(404).json({ success: false, error: 'Journal not found' });
+        const story = await Story.findById(req.params.id);
+        if (!story) return res.status(404).json({ success: false, error: 'Story not found' });
 
-        const index = journal.likes.indexOf(userEmail);
+        const index = story.likes.indexOf(userEmail);
         if (index === -1) {
-            journal.likes.push(userEmail);
+            story.likes.push(userEmail);
         } else {
-            journal.likes.splice(index, 1);
+            story.likes.splice(index, 1);
         }
 
-        await journal.save();
-        res.json({ success: true, likes: journal.likes });
+        await story.save();
+        res.json({ success: true, likes: story.likes });
     } catch (error: any) {
         res.status(500).json({ success: false, error: error.message });
     }
 });
 
 /**
- * @route DELETE /api/travel-journals/:id
- * @desc Delete a journal
+ * @route DELETE /api/stories/:id
+ * @desc Delete a story
  */
 router.delete('/:id', authenticate, async (req: AuthRequest, res: Response) => {
     try {
         await connectDB();
-        const journal = await TravelJournal.findById(req.params.id);
-        if (!journal) return res.status(404).json({ success: false, error: 'Journal not found' });
+        const story = await Story.findById(req.params.id);
+        if (!story) return res.status(404).json({ success: false, error: 'Story not found' });
 
-        if (journal.author.email !== req.user?.email && req.user?.role !== 'admin') {
+        if (story.author.email !== req.user?.email && req.user?.role !== 'admin') {
             return res.status(403).json({ success: false, error: 'Unauthorized' });
         }
 
-        await TravelJournal.findByIdAndDelete(req.params.id);
-        res.json({ success: true, message: 'Journal deleted' });
+        await Story.findByIdAndDelete(req.params.id);
+        res.json({ success: true, message: 'Story deleted' });
     } catch (error: any) {
         res.status(500).json({ success: false, error: error.message });
     }
 });
 
 export default router;
+

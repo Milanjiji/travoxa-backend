@@ -3,7 +3,7 @@ import mongoose, { Document, Schema } from "mongoose";
 export interface ISavedItem extends Document {
     userId: string;
     itemId: string;
-    itemType: 'tour' | 'attraction' | 'activity' | 'sightseeing' | 'stay' | 'rental' | 'food' | 'journal';
+    itemType: 'tour' | 'attraction' | 'activity' | 'sightseeing' | 'stay' | 'rental' | 'food' | 'story';
     title?: string;
     itemLink?: string;
     createdAt: Date;
@@ -15,7 +15,7 @@ const savedItemSchema = new Schema<ISavedItem>({
     itemType: {
         type: String,
         required: true,
-        enum: ['tour', 'attraction', 'activity', 'sightseeing', 'stay', 'rental', 'food', 'journal'],
+        enum: ['tour', 'attraction', 'activity', 'sightseeing', 'stay', 'rental', 'food', 'story'],
     },
     title: { type: String },
     itemLink: { type: String },

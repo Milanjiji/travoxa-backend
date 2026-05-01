@@ -1,6 +1,6 @@
 import mongoose, { Schema, Document, Model } from 'mongoose';
 
-export interface IJournalStep {
+export interface IStoryStep {
     location: string;
     time?: string;
     description: string;
@@ -8,8 +8,8 @@ export interface IJournalStep {
     igLink?: string;
 }
 
-export interface ITravelJournal extends Document {
-    type: 'journal' | 'standalone_link';
+export interface IStory extends Document {
+    type: 'story' | 'standalone_link';
     title: string;
     description: string; // Overview
     tripType?: string;
@@ -20,7 +20,7 @@ export interface ITravelJournal extends Document {
         name: string;
         image?: string;
     };
-    steps: IJournalStep[];
+    steps: IStoryStep[];
     status: 'draft' | 'published';
     likes: string[]; // Array of user emails
     isPublic: boolean;
@@ -28,7 +28,7 @@ export interface ITravelJournal extends Document {
     updatedAt: Date;
 }
 
-const JournalStepSchema = new Schema<IJournalStep>({
+const StoryStepSchema = new Schema<IStoryStep>({
     location: { type: String, required: true },
     time: { type: String },
     description: { type: String, required: true },
@@ -36,9 +36,9 @@ const JournalStepSchema = new Schema<IJournalStep>({
     igLink: { type: String }
 });
 
-const TravelJournalSchema = new Schema<ITravelJournal>(
+const StorySchema = new Schema<IStory>(
     {
-        type: { type: String, enum: ['journal', 'standalone_link'], default: 'journal' },
+        type: { type: String, enum: ['story', 'standalone_link'], default: 'story' },
         title: { type: String, required: true },
         description: { type: String },
         tripType: { type: String },
@@ -49,7 +49,7 @@ const TravelJournalSchema = new Schema<ITravelJournal>(
             name: { type: String, required: true },
             image: { type: String }
         },
-        steps: [JournalStepSchema],
+        steps: [StoryStepSchema],
         status: { type: String, enum: ['draft', 'published'], default: 'published' },
         likes: [{ type: String }],
         isPublic: { type: Boolean, default: true }
@@ -57,6 +57,7 @@ const TravelJournalSchema = new Schema<ITravelJournal>(
     { timestamps: true }
 );
 
-const TravelJournal: Model<ITravelJournal> = mongoose.models.TravelJournal || mongoose.model<ITravelJournal>('TravelJournal', TravelJournalSchema);
+const Story: Model<IStory> = mongoose.models.Story || mongoose.model<IStory>('Story', StorySchema);
 
-export default TravelJournal;
+export default Story;
+
